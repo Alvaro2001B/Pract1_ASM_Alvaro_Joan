@@ -7,7 +7,7 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
     //Prueba
     override fun onCreate(savedInstanceState: Bundle?) {
-        Thread.sleep(10000)
+        Thread.sleep(5000)
         setTheme(R.style.Theme_Pract1_ASM_Alvaro_Joan)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
