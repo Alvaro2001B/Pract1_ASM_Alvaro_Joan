@@ -13,18 +13,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val inicio_session_button= findViewById<Button>(R.id.inicio_session)
-        inicio_session_button.setOnClickListener{
-            val intent = Intent()
-            intent.setClass(this, IniciarActivity::class.java)
+        val signUpButton: Button=findViewById<Button>(R.id.Registrar_se)
+        signUpButton.setOnClickListener {
+            val intent: Intent = Intent()
+            intent.setClass(this, RegistreActivity::class.java)
             this.startActivity(intent)
         }
 
-        val signUpButton: Button=findViewById<Button>(R.id.button2)
-        signUpButton.setOnClickListener{
-            val intent:Intent=Intent()
-            intent.setClass(this,RegistreActivity::class.java)
-            this.startActivity(intent)
+        val inicio_session_button= findViewById<Button>(R.id.inicio_session)
+            inicio_session_button.setOnClickListener{
+                val intent2: Intent = Intent()
+                intent2.setClass(this, IniciarActivity::class.java)
+                this.startActivity(intent2)
+            }
         }
+
     }
-}
