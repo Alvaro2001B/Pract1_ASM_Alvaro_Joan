@@ -15,11 +15,12 @@
         android:layout_marginBottom="116dp"
         android:text="@string/iniciar_sessi"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/Registrar_se"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Registrar_se"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
