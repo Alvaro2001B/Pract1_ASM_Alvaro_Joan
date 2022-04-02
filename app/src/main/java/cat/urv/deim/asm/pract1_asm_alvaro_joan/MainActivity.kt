@@ -3,6 +3,7 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     //Prueba
@@ -12,5 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val registreButton: Button = findViewById<Button>(R.id.button2)
+        registreButton.setOnClickListener {
+            val intent: Intent = Intent()
+            intent.setClass(this, RegistreActivity::class.java)
+            this.startActivity(intent)
+        }
     }
 }
