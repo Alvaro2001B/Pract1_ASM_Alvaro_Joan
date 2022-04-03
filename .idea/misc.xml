@@ -13,6 +13,8 @@
         <entry key="..\:/Users/VSPC/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/drawable/splashscreen.xml" value="0.1" />
         <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_iniciar.xml" value="0.25" />
         <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_patinetes.xml" value="0.1" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_registre.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
@@ -21,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>
