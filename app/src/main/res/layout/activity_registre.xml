@@ -11,8 +11,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="210dp"
-        android:layout_height="442dp"
+        android:layout_width="207dp"
+        android:layout_height="428dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="11dp"
@@ -20,7 +20,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.0">
 
         <EditText
             android:id="@+id/hint1"
@@ -58,18 +59,19 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/hint6"
+            android:id="@+id/Password1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/hint7"
+            android:id="@+id/Password2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPassword" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -133,17 +135,27 @@
             android:layout_height="45dp"
             android:text="@string/RepContrasenya"
             android:textColor="@color/black" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/BotoRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleY="1.25"
+        android:text="@string/botoregistrar"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteY="594dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

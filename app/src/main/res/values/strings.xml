@@ -13,4 +13,6 @@
     <string name="Localitat">LOCALITAT:</string>
     <string name="Contrasenya">CONTRASENYA:</string>
     <string name="RepContrasenya">REPETEIX LA CONTRASENYA:</string>
+    <string name="selecciona_un_patinete">SELECCIONA UN PATINET:</string>
+    <string name="botoregistrar">REGISTRAR</string>
 </resources>

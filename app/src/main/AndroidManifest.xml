@@ -10,17 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pract1_ASM_Alvaro_Joan">
         <activity
+            android:name=".PatinetesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:theme="@style/SplashScreen"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IniciarActivity"></activity>
-        <activity android:name=".RegistreActivity"></activity>
-
+        <activity android:name=".IniciarActivity" />
+        <activity android:name=".RegistreActivity" />
     </application>
 
 </manifest>

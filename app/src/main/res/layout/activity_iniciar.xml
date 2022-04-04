@@ -6,4 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".IniciarActivity">
 
+
+    <TextView
+        android:id="@+id/txt_password"
+        android:layout_width="217dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="110dp"
+        android:gravity="center"
+        android:rotation="0"
+        android:rotationX="0"
+        android:rotationY="0"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Contraseña"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_iniciar" />
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="207dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/txt_iniciar_session"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logo50" />
+
+    <TextView
+        android:id="@+id/txt_iniciar_session"
+        android:layout_width="213dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="102dp"
+        android:gravity="center"
+        android:rotation="0"
+        android:rotationX="0"
+        android:rotationY="0"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Iniciar sesion"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/edit_txt_iniciar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo2"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edit_txt_iniciar"
+        android:layout_width="296dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="58dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="DNI"
+        app:layout_constraintBottom_toTopOf="@+id/txt_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_iniciar_session" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="296dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/button_iniciar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_password"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button_iniciar"
+        android:layout_width="156dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="36dp"
+        android:text="Iniciar sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+>>>>>>> origin/master
 </androidx.constraintlayout.widget.ConstraintLayout>
