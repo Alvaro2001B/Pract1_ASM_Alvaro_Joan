@@ -9,6 +9,12 @@ class RegistreActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registre)
-        }
 
+        val registrarse= findViewById<Button>(R.id.BotoRegistrar)
+        registrarse.setOnClickListener{
+            val intent: Intent = Intent()
+            intent.setClass(this, PatinetesActivity::class.java)
+            this.startActivity(intent)
+        }
+    }
     }

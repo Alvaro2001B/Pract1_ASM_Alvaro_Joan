@@ -9,16 +9,17 @@
     <RelativeLayout
         android:id="@+id/layout_contenedor1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="189dp" />
 
     <ImageView
         android:id="@+id/logo3"
         android:layout_width="207dp"
         android:layout_height="206dp"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="9dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,9 +33,8 @@
         android:layout_width="296dp"
         android:layout_height="66dp"
         android:layout_marginStart="57dp"
-        android:layout_marginTop="9dp"
         android:layout_marginEnd="58dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="@string/selecciona_un_patinete"
         android:textColor="#050505"
@@ -62,15 +62,17 @@
         tools:ignore="MissingConstraints">
 
         <ScrollView
+            android:id="@+id/caja_patinetes"
             android:layout_width="350dp"
             android:layout_height="349dp"
+            android:scrollbarStyle="outsideInset"
             android:scrollbars="vertical"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
             <RelativeLayout
                 android:id="@+id/layout_contenedor"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -82,6 +84,7 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:contentDescription="@string/todo"
                         app:srcCompat="@drawable/patinete_electrico_dualtron_storm" />
 
                     <Button
@@ -89,14 +92,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:text="@string/button" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="92dp"
-                    android:orientation="horizontal" />
             </RelativeLayout>
         </ScrollView>
     </LinearLayout>
