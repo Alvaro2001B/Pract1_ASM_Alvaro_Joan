@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pract1_ASM_Alvaro_Joan">
         <activity
+            android:name=".AyudaActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".AyudaActivity2"
+            android:exported="false" />
+        <activity
             android:name=".PatinetesActivity"
             android:exported="false" />
         <activity
