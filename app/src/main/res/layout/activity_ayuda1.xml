@@ -9,18 +9,17 @@
 
     <ImageView
         android:id="@+id/imageview1"
-        android:layout_width="265dp"
-        android:layout_height="264dp"
-        android:layout_marginStart="78dp"
+        android:layout_width="308dp"
+        android:layout_height="288dp"
+        android:layout_marginStart="63dp"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="78dp"
-        android:contentDescription="imagen"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="@string/imagen"
         app:layout_constraintBottom_toTopOf="@+id/descripcion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ayuda1" />
+        app:srcCompat="@drawable/ayuda1" />
 
     <TextView
         android:id="@+id/descripcion"
@@ -31,7 +30,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="152dp"
         android:gravity="center"
-        android:text="Lloga el teu patinet en un instant"
+        android:text="@string/lloga_el_teu_patinet_en_un_instant"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +48,7 @@
         android:layout_marginTop="152dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="64dp"
-        android:text="SIGUIENTE"
+        android:text="@string/siguiente"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +64,7 @@
         android:layout_marginTop="152dp"
         android:layout_marginEnd="163dp"
         android:layout_marginBottom="64dp"
-        android:text="SALTAR"
+        android:text="@string/saltar"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/siguiente"

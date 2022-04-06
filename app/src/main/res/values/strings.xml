@@ -16,4 +16,9 @@
     <string name="selecciona_un_patinete">SELECCIONA UN PATINET:</string>
     <string name="botoregistrar">REGISTRAR</string>
     <string name="button">Button</string>
+    <string name="imagen">imagen</string>
+    <string name="siguiente">SIGUIENTE</string>
+    <string name="saltar">SALTAR</string>
+    <string name="viatja_per_la_ciutat_de_la_manera_m_s_ecol_gica_i_r_pida">Viatja per la ciutat de la manera més ecològica i ràpida</string>
+    <string name="lloga_el_teu_patinet_en_un_instant">Lloga el teu patinet en un instant</string>
 </resources>
