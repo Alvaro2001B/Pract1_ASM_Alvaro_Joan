@@ -6,4 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".AyudaActivity2">
 
+    <ImageView
+        android:id="@+id/imageview1"
+        android:layout_width="265dp"
+        android:layout_height="264dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="78dp"
+        android:contentDescription="imagen"
+        app:layout_constraintBottom_toTopOf="@+id/descripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ayuda2" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="380dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="152dp"
+        android:gravity="center"
+        android:text="Crea el teu perfil per tindre un registre de tots els patinets disponibles !!!"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/siguiente"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="64dp"
+        android:text="SIGUIENTE"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saltar"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saltar"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="64dp"
+        android:text="SALTAR"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/siguiente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

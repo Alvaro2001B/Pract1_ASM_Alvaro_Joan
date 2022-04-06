@@ -10,24 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pract1_ASM_Alvaro_Joan">
         <activity
-            android:name=".AyudaActivity3"
-            android:exported="false" />
+            android:name=".AyudaActivity1"
+            android:exported="true"
+            android:theme="@style/SplashScreen">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".AyudaActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".AyudaActivity3"
             android:exported="false" />
         <activity
             android:name=".PatinetesActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
         <activity android:name=".IniciarActivity" />
         <activity android:name=".RegistreActivity" />
     </application>

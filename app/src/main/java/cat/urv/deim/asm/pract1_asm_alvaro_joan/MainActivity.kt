@@ -8,8 +8,7 @@ import android.widget.Button
 class MainActivity : AppCompatActivity() {
     //Prueba
     override fun onCreate(savedInstanceState: Bundle?) {
-        Thread.sleep(5000)
-        setTheme(R.style.Theme_Pract1_ASM_Alvaro_Joan)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
