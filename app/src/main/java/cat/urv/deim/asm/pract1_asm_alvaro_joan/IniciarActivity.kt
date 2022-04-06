@@ -10,8 +10,7 @@ class IniciarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_iniciar)
 
-        val iniciar= findViewById<Button>(R.id.button_iniciar)
-        iniciar.setOnClickListener{
+            findViewById<Button>(R.id.button_iniciar).setOnClickListener{
             val intent: Intent = Intent()
             intent.setClass(this, PatinetesActivity::class.java)
             this.startActivity(intent)

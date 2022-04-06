@@ -10,15 +10,13 @@ class AyudaActivity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ayuda3)
 
-        val siguiente: Button =findViewById<Button>(R.id.siguiente)
-        siguiente.setOnClickListener {
+        findViewById<Button>(R.id.siguiente).setOnClickListener {
             val intent: Intent = Intent()
             intent.setClass(this, MainActivity::class.java)
             this.startActivity(intent)
         }
 
-        val saltar= findViewById<Button>(R.id.saltar)
-        saltar.setOnClickListener{
+            findViewById<Button>(R.id.saltar).setOnClickListener{
             val intent2: Intent = Intent()
             intent2.setClass(this, MainActivity::class.java)
             this.startActivity(intent2)
