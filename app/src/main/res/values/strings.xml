@@ -10,7 +10,7 @@
     <string name="Cognoms">COGNOMS:</string>
     <string name="DNI">DNI:</string>
     <string name="Telefon">TELÈFON:</string>
-    <string name="Localitat">LOCALITAT:</string>
+    <string name="Correu">CORREU ELECTRÒNIC:</string>
     <string name="Contrasenya">CONTRASENYA:</string>
     <string name="RepContrasenya">REPETEIX LA CONTRASENYA:</string>
     <string name="selecciona_un_patinete">SELECCIONA UN PATINET:</string>
