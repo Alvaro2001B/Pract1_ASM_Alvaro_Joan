@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
             this.startActivity(intent)
         }
 
-        val inicio_session_button= findViewById<Button>(R.id.inicio_session)
-            inicio_session_button.setOnClickListener{
+
+        findViewById<Button>(R.id.inicio_session).setOnClickListener{
                 val intent2: Intent = Intent()
                 intent2.setClass(this, IniciarActivity::class.java)
                 this.startActivity(intent2)
