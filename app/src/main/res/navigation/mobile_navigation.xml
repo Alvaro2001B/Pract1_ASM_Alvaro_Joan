@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.gallery.PatinetsFragment"
+        android:label="@string/menu_Patinets"
+        tools:layout="@layout/fragment_perfil" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.home.PerfilFragment"
+        android:label="@string/menu_Perfil"
+        tools:layout="@layout/fragment_patinets" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.slideshow.HistorialFragment"
+        android:label="@string/menu_Historial"
+        tools:layout="@layout/fragment_historial" />
+</navigation>

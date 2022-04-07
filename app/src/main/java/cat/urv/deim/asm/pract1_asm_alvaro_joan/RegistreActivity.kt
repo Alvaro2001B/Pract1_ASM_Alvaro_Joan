@@ -12,7 +12,7 @@ class RegistreActivity : AppCompatActivity() {
 
             findViewById<Button>(R.id.BotoRegistrar).setOnClickListener{
             val intent: Intent = Intent()
-            intent.setClass(this, PatinetesActivity::class.java)
+            intent.setClass(this, NavegacioActivity::class.java)
             this.startActivity(intent)
         }
     }

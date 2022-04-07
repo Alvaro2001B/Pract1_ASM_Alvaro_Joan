@@ -10,14 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pract1_ASM_Alvaro_Joan">
         <activity
+            android:name=".NavegacioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navegacio"
+            android:theme="@style/Theme.Pract1_ASM_Alvaro_Joan.NoActionBar" />
+        <activity
             android:name=".AyudaActivity1"
             android:exported="true"
             android:theme="@style/SplashScreen">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".AyudaActivity2"
@@ -30,9 +35,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
-
-
+            android:exported="false" />
         <activity android:name=".IniciarActivity" />
         <activity android:name=".RegistreActivity" />
     </application>

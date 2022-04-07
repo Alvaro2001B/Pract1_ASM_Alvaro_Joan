@@ -13,9 +13,19 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="SplashScreen" parent="Theme.Pract1_ASM_Alvaro_Joan">
-            <item name="android:windowBackground">
-                @drawable/splashscreen
-            </item>
+        <item name="android:windowBackground">
+            @drawable/splashscreen
+        </item>
     </style>
+
+    <style name="Theme.Pract1_ASM_Alvaro_Joan.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Pract1_ASM_Alvaro_Joan.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Pract1_ASM_Alvaro_Joan.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
