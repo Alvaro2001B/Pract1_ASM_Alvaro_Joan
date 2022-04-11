@@ -3,23 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_patinets">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_patinets"
         android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.gallery.PatinetsFragment"
         android:label="@string/menu_Patinets"
-        tools:layout="@layout/fragment_perfil" />
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_nav_patinets_to_nav_perfil"
+            app:destination="@id/nav_perfil"
+            app:popUpTo="@id/nav_patinets"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_nav_patinets_to_preferenciesFragment"
+            app:destination="@id/preferenciesFragment"
+            app:popUpTo="@id/nav_patinets" />
+        <action
+            android:id="@+id/action_nav_patinets_to_nav_historial"
+            app:destination="@id/nav_historial"
+            app:popUpTo="@id/nav_patinets" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_perfil"
         android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.home.PerfilFragment"
         android:label="@string/menu_Perfil"
         tools:layout="@layout/fragment_patinets" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_historial"
         android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.slideshow.HistorialFragment"
         android:label="@string/menu_Historial"
         tools:layout="@layout/fragment_historial" />
+    <fragment
+        android:id="@+id/preferenciesFragment"
+        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.PreferenciesFragment"
+        android:label="fragment_preferencies"
+        tools:layout="@layout/fragment_preferencies" />
 </navigation>
