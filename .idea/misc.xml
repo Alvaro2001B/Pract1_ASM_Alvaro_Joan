@@ -6,7 +6,6 @@
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.167" />
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.12" />
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/drawable/splashscreen.xml" value="0.1945" />
-        <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_ayuda3.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_inici_sessio.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_inici_sessio2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_iniciar.xml" value="0.12092391304347826" />
@@ -32,13 +31,20 @@
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/nav_header_navegacio.xml" value="0.15942028985507245" />
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/menu/navegacio.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_patinetes.xml" value="0.1" />
+        <entry key="..\:/Users/HP/StudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_registre.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/VSPC/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/drawable/splashscreen.xml" value="0.1" />
         <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_ayuda1.xml" value="0.25" />
-        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_ayuda2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_ayuda3.xml" value="0.25" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_ayuda2.xml" value="0.1" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_ayuda3.xml" value="0.1" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_iniciar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_registre.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_navegacio.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_patinetes.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/activity_registre.xml" value="0.176" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/app_bar_navegacio.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/board_item.xml" value="0.2" />
+        <entry key="..\:/Users/alvar/AndroidStudioProjects/Pract1_ASM_Alvaro_Joan/app/src/main/res/layout/nav_header_navegacio.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

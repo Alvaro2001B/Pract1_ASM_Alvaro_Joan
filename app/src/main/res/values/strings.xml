@@ -3,7 +3,6 @@
     <string name="patinfly">PATINFLY</string>
     <string name="registrar_se">Registrar-se</string>
     <string name="iniciar_sessi">Iniciar Sessió</string>
-    <string name="todo">TODO</string>
     <string name="Registre">Registrat a Patinfly per gaudir dels nostres serveis!</string>
     <string name="Nom">NOM:</string>
     <string name="hint1">Introduir nom</string>
@@ -21,7 +20,6 @@
     <string name="saltar">SALTAR</string>
     <string name="viatja_per_la_ciutat_de_la_manera_m_s_ecol_gica_i_r_pida">Viatja per la ciutat de la manera més ecològica i ràpida</string>
     <string name="lloga_el_teu_patinet_en_un_instant">Lloga el teu patinet en un instant</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_navegacio">NavegacioActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -34,4 +32,12 @@
     <string name="menu_Patinets">Patinets</string>
     <string name="menu_Perfil">Perfil</string>
     <string name="menu_Historial">Historial</string>
+    <string name="cognoms">Cognoms</string>
+    <string name="xxxxxxxxx">xxxxxxxxx</string>
+    <string name="ejemplo_gmail_com">ejemplo@gmail.com</string>
+    <string name="dni">DNI</string>
+    <string name="nombre">Nombre</string>
+    <string name="todo">TODO</string>
+    <string name="contrasenya">Contrasenya</string>
+    <string name="repeteix_contrasenya">Repeteix contrasenya</string>
 </resources>
