@@ -3,33 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_patinets">
+    app:startDestination="@id/nav_perfil">
 
     <fragment
-        android:id="@+id/nav_patinets"
-        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.gallery.PatinetsFragment"
-        android:label="@string/menu_Patinets"
-        tools:layout="@layout/fragment_perfil" >
-        <action
-            android:id="@+id/action_nav_patinets_to_nav_perfil"
-            app:destination="@id/nav_perfil"
-            app:popUpTo="@id/nav_patinets"
-            app:popUpToInclusive="false" />
-        <action
-            android:id="@+id/action_nav_patinets_to_preferenciesFragment"
-            app:destination="@id/preferenciesFragment"
-            app:popUpTo="@id/nav_patinets" />
-        <action
-            android:id="@+id/action_nav_patinets_to_nav_historial"
-            app:destination="@id/nav_historial"
-            app:popUpTo="@id/nav_patinets" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/nav_perfil"
+        android:id="@+id/nav_patinetes"
         android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.home.PerfilFragment"
         android:label="@string/menu_Perfil"
-        tools:layout="@layout/fragment_patinets" />
+        tools:layout="@layout/fragment_patinets" >
+        <action
+            android:id="@+id/action_nav_patinetes_to_nav_historial"
+            app:destination="@id/nav_historial" />
+        <action
+            android:id="@+id/action_nav_patinetes_to_patinetsFragment"
+            app:destination="@id/nav_perfil" />
+        <action
+            android:id="@+id/action_nav_patinetes_to_preferenciesFragment"
+            app:destination="@id/preferenciesFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_historial"
@@ -41,4 +31,9 @@
         android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.PreferenciesFragment"
         android:label="fragment_preferencies"
         tools:layout="@layout/fragment_preferencies" />
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.gallery.PatinetsFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
 </navigation>
