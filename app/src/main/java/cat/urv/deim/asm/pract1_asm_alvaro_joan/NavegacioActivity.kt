@@ -20,6 +20,7 @@ class NavegacioActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityNavegacioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -36,7 +37,7 @@ class NavegacioActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_patinets, R.id.nav_patinetes, R.id.nav_historial
+                R.id.nav_patinets, R.id.nav_perfil, R.id.nav_historial
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -51,6 +52,4 @@ class NavegacioActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_navegacio)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-}
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp() }}
