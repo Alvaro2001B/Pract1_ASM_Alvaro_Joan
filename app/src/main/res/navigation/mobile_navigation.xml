@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_perfil">
+    app:startDestination="@id/nav_patinetes">
 
     <fragment
         android:id="@+id/nav_patinetes"
         android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.PatinetsFragment"
-        android:label="@string/menu_Patinets"
-        tools:layout="@layout/fragment_patinets">
+        android:label="@string/menu_Patinets">
 
     </fragment>
 
@@ -20,14 +19,11 @@
 
     </fragment>
     <fragment
-        android:id="@+id/nav_preferencias"
-        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.historial.PreferenciasFragment"
-        android:label="fragment_preferencies"
-        tools:layout="@layout/fragment_historial">
-
-    </fragment>
-    <fragment
         android:id="@+id/nav_perfil"
         android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.perfil.PerfilFragment"
-        android:label="Perfil" />
+        android:label="@string/menu_Perfil" />
+    <fragment
+        android:id="@+id/nav_preferencias"
+        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.preferencias.PreferenciasFragment"
+        android:label="@string/menu_preferencias" />
 </navigation>

@@ -1,4 +1,4 @@
-package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.historial
+package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.preferencias
 
 import android.os.Bundle
 import android.view.LayoutInflater

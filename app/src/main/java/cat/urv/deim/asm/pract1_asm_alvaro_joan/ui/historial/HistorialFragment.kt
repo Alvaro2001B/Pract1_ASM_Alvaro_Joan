@@ -23,7 +23,7 @@ class HistorialFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val slideshowViewModel =
-            ViewModelProvider(this).get(PreferenciasViewModel::class.java)
+            ViewModelProvider(this).get(HistorialViewModel::class.java)
 
         _binding = FragmentHistorialBinding.inflate(inflater, container, false)
         val root: View = binding.root
