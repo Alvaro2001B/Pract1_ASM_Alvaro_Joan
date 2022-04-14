@@ -19,7 +19,7 @@
         android:rotationY="0"
         android:scaleX="2"
         android:scaleY="2"
-        android:text="Contraseña"
+        android:text="@string/contrase_a"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
         android:rotationY="0"
         android:scaleX="2"
         android:scaleY="2"
-        android:text="Iniciar sesion"
+        android:text="@string/iniciar_sesion"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/edit_txt_iniciar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,8 +71,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="58dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
-        android:text="DNI"
+        android:text="@string/dni"
         app:layout_constraintBottom_toTopOf="@+id/txt_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +87,8 @@
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_passw"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/button_iniciar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,11 +104,12 @@
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="36dp"
         android:backgroundTint="#ffcc0000"
-        android:text="Iniciar sesion"
+        android:text="@string/iniciar_sesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 >>>>>>> origin/master
 </androidx.constraintlayout.widget.ConstraintLayout>

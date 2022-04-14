@@ -1,4 +1,4 @@
-package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.gallery
+package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.perfil
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.FragmentPatinetsBinding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.FragmentPerfilBinding
 
-class PatinetsFragment : Fragment() {
+class PerfilFragment : Fragment() {
 
-    private var _binding: FragmentPatinetsBinding? = null
+    private var _binding: FragmentPerfilBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -21,16 +21,15 @@ class PatinetsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-
     ): View {
-        val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        val homeViewModel =
+            ViewModelProvider(this).get(PerfilViewModel::class.java)
 
-        _binding = FragmentPatinetsBinding.inflate(inflater, container, false)
+        _binding = FragmentPerfilBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textView
-        galleryViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textGallery
+        homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

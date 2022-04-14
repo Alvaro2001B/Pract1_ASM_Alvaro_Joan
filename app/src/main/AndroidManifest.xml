@@ -31,9 +31,6 @@
             android:name=".AyudaActivity3"
             android:exported="false" />
         <activity
-            android:name=".PatinetesActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity android:name=".IniciarActivity" />

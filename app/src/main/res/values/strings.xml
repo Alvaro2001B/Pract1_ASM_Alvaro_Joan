@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Pract1_ASM_Alvaro_Joan</string>
     <string name="patinfly">PATINFLY</string>
     <string name="registrar_se">Registrar-se</string>
@@ -32,12 +32,17 @@
     <string name="menu_Patinets">Patinets</string>
     <string name="menu_Perfil">Perfil</string>
     <string name="menu_Historial">Historial</string>
+    <string name="menu_preferencias">Preferencies</string>
     <string name="cognoms">Cognoms</string>
     <string name="xxxxxxxxx">xxxxxxxxx</string>
     <string name="ejemplo_gmail_com">ejemplo@gmail.com</string>
-    <string name="dni">DNI</string>
     <string name="nombre">Nombre</string>
     <string name="todo">TODO</string>
     <string name="contrasenya">Contrasenya</string>
     <string name="repeteix_contrasenya">Repeteix contrasenya</string>
+    <string name="Preferencias" />
+    <string name="contrase_a">Contraseña</string>
+    <string name="dni">DNI</string>
+    <string name="iniciar_sesion">Iniciar sesion</string>
+    <string name="hint_passw">*************</string>
 </resources>

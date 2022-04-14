@@ -1,10 +1,10 @@
-package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.slideshow
+package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.historial
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class HistorialViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is slideshow Fragment"

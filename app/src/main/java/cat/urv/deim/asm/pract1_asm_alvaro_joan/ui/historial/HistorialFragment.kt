@@ -1,4 +1,4 @@
-package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.slideshow
+package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.historial
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,7 +23,7 @@ class HistorialFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+            ViewModelProvider(this).get(PreferenciasViewModel::class.java)
 
         _binding = FragmentHistorialBinding.inflate(inflater, container, false)
         val root: View = binding.root

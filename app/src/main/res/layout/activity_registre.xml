@@ -140,7 +140,7 @@
                     android:hint="@string/nombre"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
-                    android:textColorHint="#78909C" />
+                    android:textColorHint="#757575" />
 
                 <EditText
                     android:id="@+id/cognomsUserR"
@@ -159,7 +159,9 @@
                     android:ems="10"
                     android:hint="@string/dni"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp" />
+                    android:minHeight="48dp"
+                    android:textColor="#090909"
+                    android:textColorHint="#757575" />
 
                 <EditText
                     android:id="@+id/mailUserR"
@@ -189,7 +191,7 @@
                     android:hint="@string/contrasenya"
                     android:inputType="textPassword"
                     android:minHeight="48dp"
-                    android:textColorHint="#78909C" />
+                    android:textColorHint="#757575" />
 
                 <EditText
                     android:id="@+id/PasswordRepeatUserR"
@@ -200,6 +202,7 @@
                     android:hint="@string/repeteix_contrasenya"
                     android:inputType="textPassword"
                     android:minHeight="48dp"
+                    android:textColor="#757575"
                     tools:ignore="TouchTargetSizeCheck" />
 
             </LinearLayout>
