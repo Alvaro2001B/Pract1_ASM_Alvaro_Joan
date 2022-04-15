@@ -19,13 +19,11 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
          * (custom ViewHolder).
          */
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val textView: TextView
-            val root: View
+            val textView: TextView = view.findViewById(R.id.textView)
+            val root: View = view
 
             init {
                 // Define click listener for the ViewHolder's View.
-                textView = view.findViewById(R.id.textView)
-                root = view
             }
         }
 

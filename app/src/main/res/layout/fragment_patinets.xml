@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.patinetes.PatinetsFragment"
-    app:menu="@menu/navegacio">
+    app:menu="@menu/navegacio"
+    tools:viewBindingIgnore="true">
 
     <RelativeLayout
         android:id="@+id/layout_contenedor1"

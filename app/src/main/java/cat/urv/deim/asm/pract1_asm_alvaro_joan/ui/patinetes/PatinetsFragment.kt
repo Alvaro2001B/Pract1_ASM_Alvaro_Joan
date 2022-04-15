@@ -1,42 +1,53 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.FragmentPatinetsBinding
 
-class PatinetsFragment : Fragment() {
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.MainActivity
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityMainBinding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecyclerViewAdapter
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories.ScooterRepository
 
-    private var _binding: FragmentPatinetsBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+class PatinetsFragment : AppCompatActivity() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+    private lateinit var binding: PatinetsFragmentBinding
 
-    ): View {
-        val galleryViewModel =
-            ViewModelProvider(this).get(PatinetsViewModel::class.java)
 
-        _binding = FragmentPatinetsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //MVC
+        //setContentView(R.layout.activity_main)
 
-      /*  val textView: TextView = binding.textView
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
-        return root
+        //Binding MVVM o MVP
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onResume() {
+        super.onResume()
+
+        //val scooters:Scooters  = ScooterRepository.activeScooters()
+
+        //Scooters from json file. To access to the file raw/scooters.json:
+        val scooters:Scooters  = ScooterRepository.activeScooters(this,
+            AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
+
+        // Increase performance when the size is static
+        binding.scooterRecyclerView.setHasFixedSize(true)
+
+
+        // Our RecyclerView is using the linear layout manager
+        val layoutManager = LinearLayoutManager(applicationContext)
+        binding.scooterRecyclerView.setLayoutManager(layoutManager)
+
+        val adapter:ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooters)
+        binding.scooterRecyclerView.adapter = adapter
     }
+
 }

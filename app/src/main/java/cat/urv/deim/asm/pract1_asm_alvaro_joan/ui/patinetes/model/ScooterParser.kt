@@ -9,8 +9,6 @@ class ScooterParser {
             var scooters: Scooters
             json.let {
                 scooters = gson.fromJson<Scooters>(json, Scooters::class.java)
-            }?:run{
-                scooters = Scooters()
             }
             return scooters
         }
