@@ -7,9 +7,8 @@
 
     <fragment
         android:id="@+id/nav_patinetes"
-        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.PatinetsFragment"
+        android:name="cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.BlankFragment"
         android:label="@string/menu_Patinets">
-
     </fragment>
 
     <fragment

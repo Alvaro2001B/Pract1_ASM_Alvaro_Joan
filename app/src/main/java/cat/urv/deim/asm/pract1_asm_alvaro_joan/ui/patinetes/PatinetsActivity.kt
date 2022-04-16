@@ -1,20 +1,17 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes
 
-import android.os.Bundle
-
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.MainActivity
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityMainBinding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityPatinetsBinding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecyclerViewAdapter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories.ScooterRepository
 
+class PatinetsActivity : AppCompatActivity() {
 
-class PatinetsFragment : AppCompatActivity() {
-
-    private lateinit var binding: PatinetsFragmentBinding
+    private lateinit var binding: ActivityPatinetsBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +20,7 @@ class PatinetsFragment : AppCompatActivity() {
         //setContentView(R.layout.activity_main)
 
         //Binding MVVM o MVP
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityPatinetsBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
@@ -35,7 +32,7 @@ class PatinetsFragment : AppCompatActivity() {
         //val scooters:Scooters  = ScooterRepository.activeScooters()
 
         //Scooters from json file. To access to the file raw/scooters.json:
-        val scooters:Scooters  = ScooterRepository.activeScooters(this,
+        val scooters: Scooters = ScooterRepository.activeScooters(this,
             AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
 
         // Increase performance when the size is static
@@ -46,7 +43,7 @@ class PatinetsFragment : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(applicationContext)
         binding.scooterRecyclerView.setLayoutManager(layoutManager)
 
-        val adapter:ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooters)
+        val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooters)
         binding.scooterRecyclerView.adapter = adapter
     }
 

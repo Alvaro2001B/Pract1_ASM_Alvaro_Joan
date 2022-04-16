@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class PatinetsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is historial Fragment"
+        value = "SELECCIONA UN PATINET:"
     }
     val text: LiveData<String> = _text
 }
