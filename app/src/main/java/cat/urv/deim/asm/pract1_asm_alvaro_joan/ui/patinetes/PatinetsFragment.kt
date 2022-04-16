@@ -8,14 +8,14 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.FragmentBlankBinding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.FragmentPatinetsBinding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecyclerViewAdapter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories.ScooterRepository
 
-class BlankFragment : Fragment() {
-    private var _binding:FragmentBlankBinding? = null
+class PatinetsFragment : Fragment() {
+    private var _binding:FragmentPatinetsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -26,7 +26,7 @@ class BlankFragment : Fragment() {
         val slideshowViewModel =
             ViewModelProvider(this).get(PatinetsViewModel::class.java)
 
-        _binding = FragmentBlankBinding.inflate(inflater, container, false)
+        _binding = FragmentPatinetsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textView
@@ -38,7 +38,7 @@ class BlankFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    _binding = FragmentBlankBinding.inflate(layoutInflater)
+    _binding = FragmentPatinetsBinding.inflate(layoutInflater)
         val view = binding.root
 
         }
