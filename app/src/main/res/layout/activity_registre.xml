@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-    tools:context=".RegistreActivity">
+        tools:context=".RegistreActivity">
 
         <TextView
             android:id="@+id/textView3"
@@ -47,7 +48,7 @@
             app:srcCompat="@drawable/logo50" />
 
         <Button
-            android:id="@+id/BotoRegistrar"
+            android:id="@+id/Enrere"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
@@ -68,7 +69,7 @@
             android:layout_height="401dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/BotoRegistrar"
+            app:layout_constraintBottom_toTopOf="@+id/Enrere"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3">

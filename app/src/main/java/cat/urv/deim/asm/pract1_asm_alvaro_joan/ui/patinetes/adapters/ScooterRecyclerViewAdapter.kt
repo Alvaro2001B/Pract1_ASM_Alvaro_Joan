@@ -2,34 +2,31 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters
 
 
 import android.content.Intent
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.R
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.BlankFragment
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.InfoPatinetsActivity
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 
 
 class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
         RecyclerView.Adapter<ScooterRecyclerViewAdapter.ViewHolder>() {
 
-        /**
-         * Provide a reference to the type of views that you are using
-         * (custom ViewHolder).
-         */
+
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val textView: TextView = view.findViewById(R.id.textView)
-
+           // val item:FrameLayout=view.findViewById(R.id.frame)
             val root: View = view
 
             init {
-
+           /* item.setOnClickListener{
+                val intent : Intent=Intent()
+                intent.setClass(view.context,BlankFragment::class.java)
+                view.context.startActivity(intent)
+            }*/
 
 
             }
@@ -54,8 +51,9 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
                 Toast.makeText(viewHolder.root.context,
                     "Row selected %d".format(position),
                     Toast.LENGTH_LONG).show()
-
-
+                val intent:Intent = Intent()
+                intent.setClass(viewHolder.root.context , InfoPatinetsActivity::class.java)
+                viewHolder.root.context.startActivity(intent)
             }
 
         }

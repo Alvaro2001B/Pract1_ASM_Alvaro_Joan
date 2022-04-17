@@ -10,7 +10,7 @@ class RegistreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registre)
 
-            findViewById<Button>(R.id.BotoRegistrar).setOnClickListener{
+            findViewById<Button>(R.id.Enrere).setOnClickListener{
             val intent: Intent = Intent()
             intent.setClass(this, NavegacioActivity::class.java)
             this.startActivity(intent)

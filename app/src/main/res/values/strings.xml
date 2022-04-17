@@ -48,4 +48,15 @@
     <string name="todo">TODO</string>
     <string name="dades">Dades</string>
     <string name="alquilar">Alquilar</string>
+    <string name="informacio_sobre_el_patinet_seleccionat">Informacio sobre el patinet seleccionat:</string>
+    <string name="latitud">Latitud:</string>
+    <string name="longitud">Longitud:</string>
+    <string name="identificador_del_patinet">Identificador del patinet:</string>
+    <string name="nivell_de_bateria">Nivell de bateria:</string>
+    <string name="km_recorreguts">Km recorreguts:</string>
+    <string name="data_del_ultim_manteniment">Data del ultim manteniment:</string>
+    <string name="estat">Estat:</string>
+
+
+    <string name="enrere">Enrere</string>
 </resources>
