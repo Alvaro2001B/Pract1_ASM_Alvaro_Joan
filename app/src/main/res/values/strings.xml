@@ -15,9 +15,6 @@
     <string name="selecciona_un_patinete">SELECCIONA UN PATINET:</string>
     <string name="botoregistrar">REGISTRAR</string>
     <string name="button">Button</string>
-    <string name="imagen">imagen</string>
-    <string name="siguiente">SIGUIENTE</string>
-    <string name="saltar">SALTAR</string>
     <string name="viatja_per_la_ciutat_de_la_manera_m_s_ecol_gica_i_r_pida">Viatja per la ciutat de la manera més ecològica i ràpida</string>
     <string name="lloga_el_teu_patinet_en_un_instant">Lloga el teu patinet en un instant</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -28,7 +25,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_Patinets">Patinets</string>
     <string name="menu_Perfil">Perfil</string>
     <string name="menu_Historial">Historial</string>
@@ -62,4 +58,7 @@
     <string name="historial">Historial</string>
     <string name="logo">logo</string>
     <string name="ayuda1">ayuda1</string>
+    <string name="imagen">imagen</string>
+    <string name="siguiente">SIGUIENTE</string>
+    <string name="saltar">SALTAR</string>
 </resources>

@@ -94,7 +94,7 @@
                 <TextView
                     android:id="@+id/textView7"
                     style="@style/registro"
-                    android:text="@string/Contrasenya" />
+                    android:text="@string/km_recorreguts" />
 
 
             </LinearLayout>
@@ -171,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="@string/contrasenya"
+                    android:hint="@string/km_recorreguts"
                     android:inputType="textPassword"
                     android:minHeight="48dp"
                     android:textColorHint="#757575" />

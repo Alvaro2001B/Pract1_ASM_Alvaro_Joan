@@ -3,8 +3,6 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityAyuda1Binding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityAyuda2Binding
 
 class AyudaActivity2 : AppCompatActivity() {
