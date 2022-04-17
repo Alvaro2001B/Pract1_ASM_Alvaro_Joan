@@ -1,13 +1,18 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters
 
 
+import android.content.Intent
+import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.R
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.BlankFragment
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 
 
@@ -20,10 +25,13 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
          */
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val textView: TextView = view.findViewById(R.id.textView)
+
             val root: View = view
 
             init {
-                // Define click listener for the ViewHolder's View.
+
+
+
             }
         }
 
@@ -46,7 +54,10 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
                 Toast.makeText(viewHolder.root.context,
                     "Row selected %d".format(position),
                     Toast.LENGTH_LONG).show()
+
+
             }
+
         }
 
         // Return the size of your dataset (invoked by the layout manager)

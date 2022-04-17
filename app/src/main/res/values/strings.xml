@@ -37,7 +37,7 @@
     <string name="xxxxxxxxx">xxxxxxxxx</string>
     <string name="ejemplo_gmail_com">ejemplo@gmail.com</string>
     <string name="nombre">Nombre</string>
-    <string name="todo">TODO</string>
+
     <string name="contrasenya">Contrasenya</string>
     <string name="repeteix_contrasenya">Repeteix contrasenya</string>
     <string name="Preferencias" />
@@ -45,4 +45,7 @@
     <string name="dni">DNI</string>
     <string name="iniciar_sesion">Iniciar sesion</string>
     <string name="hint_passw">*************</string>
+    <string name="todo">TODO</string>
+    <string name="dades">Dades</string>
+    <string name="alquilar">Alquilar</string>
 </resources>

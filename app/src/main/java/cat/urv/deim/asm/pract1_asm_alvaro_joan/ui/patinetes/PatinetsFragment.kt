@@ -1,6 +1,8 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes
 
+import android.content.Intent
 import android.os.Bundle
+import android.service.voice.VoiceInteractionSession
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.NavegacioActivity
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.FragmentPatinetsBinding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecyclerViewAdapter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
@@ -38,8 +41,11 @@ class PatinetsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    _binding = FragmentPatinetsBinding.inflate(layoutInflater)
+        _binding = FragmentPatinetsBinding.inflate(layoutInflater)
         val view = binding.root
+        val scooters: Scooters = ScooterRepository.activeScooters(requireContext(), AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
+        val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooters)
+        binding.scooterRecyclerView.adapter = adapter
 
         }
 
@@ -49,13 +55,15 @@ class PatinetsFragment : Fragment() {
     val scooters: Scooters = ScooterRepository.activeScooters(requireContext(), AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
         binding.scooterRecyclerView.setHasFixedSize(true)
         val layoutManager = LinearLayoutManager(requireContext())
-        binding.scooterRecyclerView.setLayoutManager(layoutManager)
-
+        binding.scooterRecyclerView.layoutManager = layoutManager
         val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooters)
         binding.scooterRecyclerView.adapter = adapter
 
+
     }
     }
+
+
 
 
 
