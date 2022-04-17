@@ -56,7 +56,10 @@
     <string name="km_recorreguts">Km recorreguts:</string>
     <string name="data_del_ultim_manteniment">Data del ultim manteniment:</string>
     <string name="estat">Estat:</string>
-
-
+    <string name="txtejemplo">Ejemplo</string>
+    <string name="Preferencies">Preferències</string>
     <string name="enrere">Enrere</string>
+    <string name="historial">Historial</string>
+    <string name="logo">logo</string>
+    <string name="ayuda1">ayuda1</string>
 </resources>

@@ -1,8 +1,7 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes
 
-import android.content.Intent
+
 import android.os.Bundle
-import android.service.voice.VoiceInteractionSession
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.NavegacioActivity
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.FragmentPatinetsBinding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecyclerViewAdapter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig

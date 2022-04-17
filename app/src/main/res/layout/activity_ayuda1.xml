@@ -7,28 +7,12 @@
     tools:context=".AyudaActivity1">
 
 
-    <ImageView
-        android:id="@+id/imageview1"
-        android:layout_width="308dp"
-        android:layout_height="288dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="40dp"
-        android:contentDescription="@string/imagen"
-        app:layout_constraintBottom_toTopOf="@+id/descripcion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ayuda1" />
-
     <TextView
         android:id="@+id/descripcion"
         android:layout_width="380dp"
         android:layout_height="91dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="47dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="152dp"
         android:gravity="center"
         android:text="@string/lloga_el_teu_patinet_en_un_instant"
         android:textColor="@android:color/holo_red_dark"
@@ -37,7 +21,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageview1" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.671" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/siguiente"
@@ -45,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="98dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="64dp"
         android:text="@string/siguiente"
@@ -61,7 +46,7 @@
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="98dp"
         android:layout_marginEnd="163dp"
         android:layout_marginBottom="64dp"
         android:text="@string/saltar"
@@ -71,6 +56,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descripcion" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="338dp"
+        android:layout_height="292dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/ayuda1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314"
+        app:srcCompat="@drawable/ayuda1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
