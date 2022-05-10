@@ -17,9 +17,8 @@ interface UserDao {
             "last_name LIKE :last LIMIT 1")
     fun findByName(first: String, last: String): User
 
-
     @Insert
-    fun insertAll(vararg users: User)
+    fun insert(vararg users: User)
 
     @Delete
     fun delete(user: User)

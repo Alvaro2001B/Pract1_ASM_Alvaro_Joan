@@ -4,8 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.room.Room
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityMainBinding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityNavegacioBinding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.AppDatabase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -29,4 +31,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-    }
+
+}

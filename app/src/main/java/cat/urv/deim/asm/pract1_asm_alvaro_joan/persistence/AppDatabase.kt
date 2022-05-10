@@ -31,7 +31,7 @@ abstract class AppDatabase : RoomDatabase() {
 
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(context.applicationContext,
-                AppDatabase::class.java, "application_database.db")
+                AppDatabase::class.java, "user_db.db")
                 //.addMigrations(MIGRATION_1_2)
                 .build()
     }

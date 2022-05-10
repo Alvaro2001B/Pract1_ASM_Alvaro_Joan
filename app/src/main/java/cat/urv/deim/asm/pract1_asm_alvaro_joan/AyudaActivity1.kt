@@ -27,4 +27,5 @@ class AyudaActivity1 : AppCompatActivity() {
             this.startActivity(intent2)
         }
     }
+
 }
