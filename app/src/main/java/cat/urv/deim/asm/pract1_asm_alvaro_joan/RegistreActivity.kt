@@ -19,4 +19,5 @@ class RegistreActivity : AppCompatActivity() {
             this.startActivity(intent)
         }
     }
+
     }
