@@ -61,4 +61,9 @@
     <string name="imagen">imagen</string>
     <string name="siguiente">SIGUIENTE</string>
     <string name="saltar">SALTAR</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="inciar">iniciar</string>
+    <string name="benvingut">benvingut</string>
+    <string name="Benvingut">Benvingut!!!</string>
 </resources>

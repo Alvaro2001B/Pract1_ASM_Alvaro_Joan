@@ -17,6 +17,8 @@ class RegistreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registre)
         binding=ActivityRegistreBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
            binding.enrere.setOnClickListener{
             val intent: Intent = Intent()
             intent.setClass(this, NavegacioActivity::class.java)
@@ -24,28 +26,18 @@ class RegistreActivity : AppCompatActivity() {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        val db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java, "db_Users"
-        ).build()
-
-        val nom: String? = binding.nameUserR.getText().toString()
-        val cognom: String? = binding.cognomsUserR.getText().toString()
-        val dni: String? = binding.dniUserR.getText().toString()
-        val mail: String? = binding.mailUserR.getText().toString()
-        val tel: String? = binding.telUserR.getText().toString()
-        val pass: String? = binding.PasswordUserR.getText().toString()
-        val pass1: String? = binding.PasswordRepeatUserR.getText().toString()
+    fun insertar(userDao:UserDao){
+        val nom: String? = binding.nameUserR.text.toString()
+        val cognom: String? = binding.cognomsUserR.text.toString()
+        val dni: String? = binding.dniUserR.text.toString()
+        val mail: String? = binding.mailUserR.text.toString()
+        val tel: String? = binding.telUserR.text.toString()
+        val pass: String? = binding.PasswordUserR.text.toString()
+        val pass1: String? = binding.PasswordRepeatUserR.text.toString()
 
         val user:User= User(0,nom,cognom,dni,mail,tel,pass,pass1)
 
-        val userDao: UserDao = db.userDao()
-
         dev_Utils.insertUser(userDao, user)
-
-
-
     }
     }
+
