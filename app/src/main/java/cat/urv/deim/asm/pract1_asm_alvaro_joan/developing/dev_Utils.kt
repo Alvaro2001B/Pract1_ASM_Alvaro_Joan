@@ -22,7 +22,7 @@ class dev_Utils {
                 for (user in users) {
                     Log.d(
                         dev_Utils::class.java.simpleName,
-                        "User: (%d) %s %s".format(user.uid, user.firstName, user.lastName)
+                        "User: (%d) %s %s".format(user.uid, user.Nom, user.Cognoms)
                     )
                 }
             })

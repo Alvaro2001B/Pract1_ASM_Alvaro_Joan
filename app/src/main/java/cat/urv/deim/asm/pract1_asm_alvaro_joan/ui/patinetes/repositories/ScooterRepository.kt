@@ -34,7 +34,7 @@ class ScooterRepository {
             val uuidList: Array<String> =AppConfig.DEFAULT_SCOOTERS_ID_ARRAY
             var scooter: Scooter
             uuidList.forEach {
-                scooter = Scooter(uuid = it, name = it, longitud = it.toDouble(), latitud = it.toDouble(), nivel_bateria = it.toInt(), km_recorreguts = it.toDouble(), año = it.toInt(), mes = it.toInt(), dia = it.toInt(),estat=it)
+                scooter = Scooter(uuid = it, name = it, longitude = it.toDouble(), latitude = it.toDouble(), battery_level = it.toInt(), km_use = it.toDouble(), date_last_maintenance=it,state=it,on_rent=it)
                 scooters.scooters.add(scooter)
             }
 

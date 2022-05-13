@@ -3,10 +3,8 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.room.Room
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityRegistreBinding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.developing.dev_Utils
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.AppDatabase
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.User
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.UserDao
 
@@ -33,9 +31,8 @@ class RegistreActivity : AppCompatActivity() {
         val mail: String? = binding.mailUserR.text.toString()
         val tel: String? = binding.telUserR.text.toString()
         val pass: String? = binding.PasswordUserR.text.toString()
-        val pass1: String? = binding.PasswordRepeatUserR.text.toString()
 
-        val user:User= User(0,nom,cognom,dni,mail,tel,pass,pass1)
+        val user:User= User(0,nom,cognom,dni,mail,tel,0.0,pass)
 
         dev_Utils.insertUser(userDao, user)
     }

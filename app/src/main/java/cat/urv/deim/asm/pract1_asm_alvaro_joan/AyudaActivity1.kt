@@ -13,17 +13,19 @@ class AyudaActivity1 : AppCompatActivity() {
     private lateinit var binding:ActivityAyuda1Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         Thread.sleep(3000)
+        val sharedPref = this.getSharedPreferences(
+            getString(R.string.benvingut), Context.MODE_PRIVATE)
+        val benvingut: Boolean = sharedPref.getBoolean(getString(R.string.benvingut),false)
+        sharedPref.edit().putBoolean(getString(R.string.benvingut),true).apply()
+        if (benvingut) {
+            Toast.makeText(applicationContext,R.string.Benvingut, Toast.LENGTH_LONG).show()
+            sharedPref.edit().putBoolean(getString(R.string.benvingut),false).apply()
+        }
         setTheme(R.style.Theme_Pract1_ASM_Alvaro_Joan)
         super.onCreate(savedInstanceState)
         binding = ActivityAyuda1Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        val sharedPref = this.getSharedPreferences(
-            getString(R.string.benvingut), Context.MODE_PRIVATE)
-        val benvingut: Boolean = sharedPref.getBoolean(getString(R.string.benvingut),false)
-        if (!benvingut) {
-            Toast.makeText(applicationContext,R.string.Benvingut, Toast.LENGTH_LONG).show()
-            sharedPref.edit().putBoolean(getString(R.string.benvingut),true).apply()
-        }
+
     }
 
     override fun onResume() {

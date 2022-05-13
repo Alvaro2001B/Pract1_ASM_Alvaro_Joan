@@ -8,10 +8,11 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class,Scooter::class,Rent::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
-    //abstract fun scooterDao(): ScooterDao
+    abstract fun scooterDao(): ScooterDao
+    abstract fun RentDao(): RentDao
 
     companion object {
 
@@ -22,7 +23,7 @@ abstract class AppDatabase : RoomDatabase() {
                 INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
             }
 
-        val MIGRATION_1_2 = object : Migration(1, 2) {
+        val MIGRATION_1_2U = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("ALTER TABLE user "
                         + " ADD COLUMN last_update INTEGER");
@@ -31,7 +32,7 @@ abstract class AppDatabase : RoomDatabase() {
 
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(context.applicationContext,
-                AppDatabase::class.java, "user_db.db")
+                AppDatabase::class.java, "ASM_db.db")
                 //.addMigrations(MIGRATION_1_2)
                 .build()
     }

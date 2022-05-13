@@ -9,11 +9,11 @@ import androidx.room.Query
 interface RentDao {
 
     @Query("SELECT * FROM taula_rent")
-    fun getAll(): List<Scooter>
+    fun getAll(): List<Rent>
 
     @Insert
-    fun insertAll(vararg scooters: Scooter)
+    fun insertAll(vararg rent: Rent)
 
     @Delete
-    fun delete(scooter: Scooter)
+    fun delete(rent: Rent)
 }
