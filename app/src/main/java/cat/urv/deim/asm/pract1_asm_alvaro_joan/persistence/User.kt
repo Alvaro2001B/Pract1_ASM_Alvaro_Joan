@@ -12,7 +12,8 @@ data class User(
     @ColumnInfo(name = "Nom") val Nom: String?,
     @ColumnInfo(name = "Cognoms") val Cognoms: String?,
     @ColumnInfo(name = "Correu") val Correu:String?,
-    @ColumnInfo(name = "Telèfon") val Telèfon:Int?,
+    @ColumnInfo(name = "Telèfon") val Telèfon:String?,
     @ColumnInfo(name = "DNI") val DNI:String?,
     @ColumnInfo(name = "Km Recorreguts") val KmRecorreguts:Double?,
+    @ColumnInfo(name = "Contrasenya") val Contrasenya:String?
 )
