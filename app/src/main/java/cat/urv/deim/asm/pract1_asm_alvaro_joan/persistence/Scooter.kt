@@ -6,7 +6,8 @@ import androidx.room.PrimaryKey
 
 @Entity (tableName = "Taula_Scooters")
 data class Scooter(
-    @PrimaryKey (autoGenerate = true) val ScooterId: Int,
+    @PrimaryKey (autoGenerate = true) val uuid: Int,
+    @ColumnInfo(name = "ScooterID") val ScooterID: Int?,
     @ColumnInfo(name = "Longitud") val Longitud: Double?,
     @ColumnInfo(name = "Latitud") val Latitud: Double?,
     @ColumnInfo(name = "Nivell de bateria") val NivellBateria: String?,

@@ -4,10 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import org.intellij.lang.annotations.Identifier
+import java.util.*
 
 @Entity
 data class User(
-    @PrimaryKey(autoGenerate = true) val UserId: Int,
+    @PrimaryKey(autoGenerate = true) val uid: Int,
     @ColumnInfo(name = "Nom") val Nom: String?,
     @ColumnInfo(name = "Cognoms") val Cognoms: String?,
     @ColumnInfo(name = "Correu") val Correu:String?,
