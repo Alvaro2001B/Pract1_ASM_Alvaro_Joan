@@ -1,13 +1,12 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence
 
-import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
-@Dao
-interface ScooterDao {
-    @Query("SELECT * FROM taula_scooters")
+interface RentDao {
+
+    @Query("SELECT * FROM taula_rent")
     fun getAll(): List<Scooter>
 
     @Insert

@@ -4,8 +4,13 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity (tableName = "Taula_Scooters")
 data class Scooter(
-    @PrimaryKey val uuid: Int,
-    @ColumnInfo(name = "identifier") val firstName: String
+    @PrimaryKey (autoGenerate = true) val ScooterId: Int,
+    @ColumnInfo(name = "Longitud") val Longitud: Double?,
+    @ColumnInfo(name = "Latitud") val Latitud: Double?,
+    @ColumnInfo(name = "Nivell de bateria") val NivellBateria: String?,
+    @ColumnInfo(name = "Km recorreguts") val KmRecorreguts: Double?,
+    @ColumnInfo(name = "Darrera Data De Manteniment") val DarrerManteniment: String?,
+    @ColumnInfo(name = "Estat") val Estat: String?
 )

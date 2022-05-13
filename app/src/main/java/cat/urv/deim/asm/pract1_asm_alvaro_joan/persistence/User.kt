@@ -7,12 +7,11 @@ import org.intellij.lang.annotations.Identifier
 
 @Entity
 data class User(
-    @PrimaryKey(autoGenerate = true) val uid: Int,
-    @ColumnInfo(name = "first_name") val firstName: String?,
-    @ColumnInfo(name = "last_name") val lastName: String?,
-    @ColumnInfo(name = "dni") val dni:String?,
-    @ColumnInfo(name = "mail") val mail:String?,
-    @ColumnInfo(name = "tel") val tel:String?,
-    @ColumnInfo(name = "pass") val pass:String?,
-    @ColumnInfo(name = "pass1") val pass1:String?
+    @PrimaryKey(autoGenerate = true) val UserId: Int,
+    @ColumnInfo(name = "Nom") val Nom: String?,
+    @ColumnInfo(name = "Cognoms") val Cognoms: String?,
+    @ColumnInfo(name = "Correu") val Correu:String?,
+    @ColumnInfo(name = "Telèfon") val Telèfon:Int?,
+    @ColumnInfo(name = "DNI") val DNI:String?,
+    @ColumnInfo(name = "Km Recorreguts") val KmRecorreguts:Double?,
 )
