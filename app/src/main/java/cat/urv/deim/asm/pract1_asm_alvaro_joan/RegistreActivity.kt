@@ -3,8 +3,10 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.room.Room
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityRegistreBinding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.developing.dev_Utils
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.AppDatabase
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.User
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.UserDao
 
@@ -15,12 +17,17 @@ class RegistreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registre)
         binding=ActivityRegistreBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val db= Room.databaseBuilder(
+            applicationContext, AppDatabase::class.java,"ASM_db"
+        ).build()
+        val userDao:UserDao= db.userDao()
 
 
            binding.enrere.setOnClickListener{
             val intent: Intent = Intent()
             intent.setClass(this, NavegacioActivity::class.java)
             this.startActivity(intent)
+               insertar(userDao)
         }
     }
 

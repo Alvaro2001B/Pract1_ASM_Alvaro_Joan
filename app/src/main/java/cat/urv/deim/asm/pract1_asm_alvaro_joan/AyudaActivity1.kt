@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.room.Room
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityAyuda1Binding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.AppDatabase
 
 
 class AyudaActivity1 : AppCompatActivity() {
@@ -26,6 +28,13 @@ class AyudaActivity1 : AppCompatActivity() {
         binding = ActivityAyuda1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val db= Room.databaseBuilder(
+            applicationContext,AppDatabase::class.java,"ASM_db"
+        ).build()
     }
 
     override fun onResume() {
