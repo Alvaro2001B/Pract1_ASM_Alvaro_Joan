@@ -28,6 +28,7 @@ class RegistreActivity : AppCompatActivity() {
             intent.setClass(this, NavegacioActivity::class.java)
             this.startActivity(intent)
                insertar(userDao)
+
         }
     }
 
