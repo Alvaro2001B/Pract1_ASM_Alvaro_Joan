@@ -18,6 +18,7 @@ class dev_Utils {
             this.scooterDao = scooterDao
             this.rentDao = rentDao
             getUsers()
+            getScooter()
         }
 
         fun insertUser(user: User) {
@@ -38,12 +39,14 @@ class dev_Utils {
                 userList = userDao.getAll()
 
             })
-            fun getUsers() {
-                Executors.newSingleThreadExecutor().execute(Runnable {
-                    scooterList = scooterDao.getAll()
 
-                })
         }
+        fun getScooter() {
+            Executors.newSingleThreadExecutor().execute(Runnable {
+                scooterList = scooterDao.getAll()
+
+            })
+
 
     }
   }
