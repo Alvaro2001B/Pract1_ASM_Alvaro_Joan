@@ -43,7 +43,7 @@
     <string name="hint_passw">*************</string>
     <string name="todo">TODO</string>
     <string name="dades">Dades</string>
-    <string name="alquilar">Alquilar</string>
+    <string name="alquilar">Llogar</string>
     <string name="informacio_sobre_el_patinet_seleccionat">Informacio sobre el patinet seleccionat:</string>
     <string name="latitud">Latitud:</string>
     <string name="longitud">Longitud:</string>
@@ -69,4 +69,5 @@
     <string name="error">DNI o contrasenya incorrecta</string>
     <string name="userdb">DatosUser</string>
     <string name="scooterdb">datosScooter</string>
+    <string name="PatinetLlogat">HAS LLOGAT EL PATINET CORRECTAMENT! JA POTS COMENÇAR A UTILITZAR-LO</string>
 </resources>

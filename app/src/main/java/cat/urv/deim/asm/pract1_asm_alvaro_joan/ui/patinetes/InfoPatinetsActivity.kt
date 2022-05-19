@@ -9,6 +9,7 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.MainActivity
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.NavegacioActivity
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.R
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityInfoPatinetsBinding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories.PatinetLlogatActivity
 
 class InfoPatinetsActivity : AppCompatActivity() {
     private lateinit var binding:ActivityInfoPatinetsBinding
@@ -33,7 +34,7 @@ class InfoPatinetsActivity : AppCompatActivity() {
         }
         binding.alquilar.setOnClickListener{
             val intent:Intent = Intent()
-            intent.setClass(this, NavegacioActivity::class.java)
+            intent.setClass(this, PatinetLlogatActivity::class.java)
             this.startActivity(intent)
         }
     }
