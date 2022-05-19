@@ -66,4 +66,6 @@
     <string name="inciar">iniciar</string>
     <string name="benvingut">benvingut</string>
     <string name="Benvingut">Benvingut!!!</string>
+    <string name="error">DNI o contrasenya incorrecta</string>
+    <string name="userdb">DatosUser</string>
 </resources>

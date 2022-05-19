@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "Taula_Rent")
 data class Rent(
-    @PrimaryKey(autoGenerate = true) val RentId: Int,
+    @PrimaryKey val DNI: Int,
     @ColumnInfo(name = "ID Scooter") val IDScooter: Int?,
     @ColumnInfo(name = "Nom") val Nom: String?,
     @ColumnInfo(name = "Cognoms") val Cognoms: String?,

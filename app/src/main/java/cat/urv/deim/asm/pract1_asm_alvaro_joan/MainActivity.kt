@@ -3,11 +3,13 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.room.Room
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityMainBinding
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityNavegacioBinding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.developing.dev_Utils
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.AppDatabase
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.RentDao
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.ScooterDao
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.UserDao
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -31,5 +33,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
+    override fun onStart() {
+        super.onStart()
+        val db= Room.databaseBuilder(
+            applicationContext,AppDatabase::class.java,"ASM_db"
+        ).build()
+        val userDao: UserDao = db.userDao()
+        val scooterDao: ScooterDao =db.scooterDao()
+        val rentDao: RentDao =db.RentDao()
+        dev_Utils.initDaos(userDao,scooterDao,rentDao)
+    }
 }

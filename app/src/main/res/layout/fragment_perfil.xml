@@ -118,6 +118,7 @@
                     android:hint="@string/nombre"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
+                    android:textColor="#090909"
                     android:textColorHint="#757575" />
 
                 <TextView
@@ -129,6 +130,7 @@
                     android:hint="@string/cognoms"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
+                    android:textColor="#090909"
                     android:textColorHint="#757575" />
 
                 <TextView
@@ -152,6 +154,7 @@
                     android:hint="@string/ejemplo_gmail_com"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
+                    android:textColor="#090909"
                     android:textColorHint="#757575" />
 
                 <TextView
@@ -163,17 +166,19 @@
                     android:hint="@string/xxxxxxxxx"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
+                    android:textColor="#090909"
                     android:textColorHint="#757575" />
 
                 <TextView
-                    android:id="@+id/PasswordUserR"
+                    android:id="@+id/kmUserR"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:gravity="center"
                     android:hint="@string/km_recorreguts"
-                    android:inputType="textPassword"
+                    android:inputType="textPersonName"
                     android:minHeight="48dp"
+                    android:textColor="#090909"
                     android:textColorHint="#757575" />
 
 

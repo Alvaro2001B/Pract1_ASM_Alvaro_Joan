@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.FragmentPatinetsBinding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.developing.dev_Utils
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.Scooter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecyclerViewAdapter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
@@ -45,12 +47,17 @@ class PatinetsFragment : Fragment() {
         val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooters)
         binding.scooterRecyclerView.adapter = adapter
 
+
         }
 
     override fun onResume() {
         super.onResume()
+        val scooters: Scooters = ScooterRepository.activeScooters(requireContext(), AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
 
-    val scooters: Scooters = ScooterRepository.activeScooters(requireContext(), AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
+        for(scooterP in scooters.scooters){
+            var scooter:Scooter= Scooter(scooterP.uuid,scooterP.longitude,scooterP.latitude,scooterP.battery_level,scooterP.km_use,scooterP.date_last_maintenance,scooterP.state)
+            dev_Utils.insertScooter(scooter)
+        }
         binding.scooterRecyclerView.setHasFixedSize(true)
         val layoutManager = LinearLayoutManager(requireContext())
         binding.scooterRecyclerView.layoutManager = layoutManager

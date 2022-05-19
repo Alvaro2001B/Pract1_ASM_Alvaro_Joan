@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.R
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.Scooter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.InfoPatinetsActivity
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 

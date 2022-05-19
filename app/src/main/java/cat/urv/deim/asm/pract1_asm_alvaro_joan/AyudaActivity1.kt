@@ -8,7 +8,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityAyuda1Binding
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.developing.dev_Utils
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.AppDatabase
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.RentDao
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.ScooterDao
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.UserDao
 
 
 class AyudaActivity1 : AppCompatActivity() {
@@ -30,12 +34,6 @@ class AyudaActivity1 : AppCompatActivity() {
 
     }
 
-    override fun onStart() {
-        super.onStart()
-        val db= Room.databaseBuilder(
-            applicationContext,AppDatabase::class.java,"ASM_db"
-        ).build()
-    }
 
     override fun onResume() {
         super.onResume()

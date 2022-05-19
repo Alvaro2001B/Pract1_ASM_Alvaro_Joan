@@ -6,14 +6,13 @@ import androidx.room.PrimaryKey
 import org.intellij.lang.annotations.Identifier
 import java.util.*
 
-@Entity
+@Entity (tableName = "Taula_Users")
 data class User(
-    @PrimaryKey(autoGenerate = true) val uid: Int,
+    @PrimaryKey val DNI:String,
     @ColumnInfo(name = "Nom") val Nom: String?,
     @ColumnInfo(name = "Cognoms") val Cognoms: String?,
     @ColumnInfo(name = "Correu") val Correu:String?,
     @ColumnInfo(name = "Telèfon") val Telèfon:String?,
-    @ColumnInfo(name = "DNI") val DNI:String?,
     @ColumnInfo(name = "Km Recorreguts") val KmRecorreguts:Double?,
     @ColumnInfo(name = "Contrasenya") val Contrasenya:String?
 )
