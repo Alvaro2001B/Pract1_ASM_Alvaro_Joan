@@ -54,14 +54,11 @@ class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapte
                 val alertDialogBuilder = AlertDialog.Builder(context)
                 alertDialogBuilder.setTitle("Fi del alquiler")
                 alertDialogBuilder.setMessage("Vols deixar el patient?").setCancelable(false).setPositiveButton("No") { dialog, id ->
-                    val intent: Intent = Intent()
-                    intent.setClass(viewHolder.root.context , NavegacioActivity::class.java)
-                    viewHolder.root.context.startActivity(intent)
                 }
                     .setNegativeButton(
                         "Si"
                     ) { dialog, id ->
-                        dev_Utils.deleteRent(rentList.get(position))
+                        dev_Utils.deleteRent(rentList[position])
                         val intent: Intent = Intent()
                         intent.setClass(viewHolder.root.context , NavegacioActivity::class.java)
                         viewHolder.root.context.startActivity(intent)
@@ -69,9 +66,6 @@ class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapte
 
             }
         }
-
-
-
 
 
 

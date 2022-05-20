@@ -27,6 +27,11 @@ class InfoPatinetsActivity : AppCompatActivity() {
             getString(R.string.userdb), Context.MODE_PRIVATE)
         val editor1= sharedPref1.edit()
 
+        val DNI:String? = sharedPref1.getString("DNI","")
+        if (DNI != null) {
+            dev_Utils.getRent(DNI)
+        }
+
         binding.textView19.text=sharedPref.getString("Longitud","")
         binding.textView20.text=sharedPref.getString("Latitud","")
         binding.textView21.text=sharedPref.getString("bt_level","")
@@ -41,7 +46,6 @@ class InfoPatinetsActivity : AppCompatActivity() {
         }
         binding.alquilar.setOnClickListener{
             val scooterID:String? = sharedPref.getString("uuid","")
-            val DNI:String? = sharedPref1.getString("DNI","")
             if (DNI != null) {
                 dev_Utils.getRent(DNI)
             }
