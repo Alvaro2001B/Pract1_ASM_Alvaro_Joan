@@ -58,7 +58,7 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
                     Toast.LENGTH_LONG).show()
                 dev_Utils.getScooter()
                 val scooterList:List<Scooter> = dev_Utils.scooterList
-                lateinit var scooter:Scooter
+                var scooter: Scooter? = null
                 var find:Boolean=false
                 Log.i("info", scooterList.toString())
                 for(scooters in scooterList){
@@ -70,7 +70,7 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
                 }
                 val sharedPref : SharedPreferences =viewHolder.root.context.getSharedPreferences("datosScooter", Context.MODE_PRIVATE)
                 val edit = sharedPref.edit()
-                edit.putString("uuid", scooter.ScooterID)
+                edit.putString("uuid", scooter!!.ScooterID)
                 edit.putString("Longitud", scooter.Longitud.toString())
                 edit.putString("Latitud",scooter.Latitud.toString())
                 edit.putString("bt_level", scooter.NivellBateria.toString())

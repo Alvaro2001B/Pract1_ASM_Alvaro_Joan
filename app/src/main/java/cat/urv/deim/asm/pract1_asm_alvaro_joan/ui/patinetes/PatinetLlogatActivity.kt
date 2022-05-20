@@ -1,4 +1,4 @@
-package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories
+package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes
 
 
 import android.content.Intent

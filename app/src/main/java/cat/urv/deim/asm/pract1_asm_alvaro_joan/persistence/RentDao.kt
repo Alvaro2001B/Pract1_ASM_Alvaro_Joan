@@ -11,8 +11,14 @@ interface RentDao {
     @Query("SELECT * FROM taula_rent")
     fun getAll(): List<Rent>
 
+    @Query("SELECT * FROM taula_rent WHERE DNI LIKE :dni")
+    fun getDNI(dni:String): List<Rent>
+
+    @Query ("DELETE FROM taula_rent")
+    fun deleteAll()
+
     @Insert
-    fun insertAll(vararg rent: Rent)
+    fun insert(vararg rent: Rent)
 
     @Delete
     fun delete(rent: Rent)

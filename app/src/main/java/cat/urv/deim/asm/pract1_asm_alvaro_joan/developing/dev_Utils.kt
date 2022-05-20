@@ -1,8 +1,6 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.developing
 
-import android.util.Log
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.*
-import java.util.*
 import java.util.concurrent.Executors
 
 class dev_Utils {
@@ -12,6 +10,7 @@ class dev_Utils {
         lateinit var rentDao: RentDao
         var userList: List<User> = emptyList()
         var scooterList: List<Scooter> = emptyList()
+        var rentList:List<Rent> = emptyList()
 
         fun initDaos(userDao: UserDao, scooterDao: ScooterDao, rentDao: RentDao) {
             this.userDao = userDao
@@ -19,11 +18,17 @@ class dev_Utils {
             this.rentDao = rentDao
             getUsers()
             getScooter()
+            getRent()
         }
 
         fun insertUser(user: User) {
             Executors.newSingleThreadExecutor().execute(Runnable {
                 userDao.insert(user)
+            })
+        }
+        fun insertRent(rent: Rent) {
+            Executors.newSingleThreadExecutor().execute(Runnable {
+                rentDao.insert(rent)
             })
         }
 
@@ -46,8 +51,29 @@ class dev_Utils {
                 scooterList = scooterDao.getAll()
 
             })
+        }
+        fun getRent() {
+            Executors.newSingleThreadExecutor().execute(Runnable {
+                rentList = rentDao.getAll()
 
+            })
+        }
+        fun getRent(dni:String) {
+            Executors.newSingleThreadExecutor().execute(Runnable {
+                rentList = rentDao.getDNI(dni)
 
-    }
+            })
+        }
+        fun deleteRentAll() {
+            Executors.newSingleThreadExecutor().execute(Runnable {
+                rentDao.deleteAll()
+            })
+        }
+        fun deleteRent(rent: Rent) {
+            Executors.newSingleThreadExecutor().execute(Runnable {
+                    rentDao.delete(rent)
+
+            })
+        }
   }
 }

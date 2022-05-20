@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pract1_ASM_Alvaro_Joan">
         <activity
-            android:name=".ui.patinetes.repositories.PatinetLlogatActivity"
+            android:name=".ui.patinetes.PatinetLlogatActivity"
             android:exported="false" />
         <activity
             android:name=".ui.patinetes.InfoPatinetsActivity"
@@ -20,6 +20,7 @@
             android:exported="false"
             android:label="@string/title_activity_navegacio"
             android:theme="@style/Theme.Pract1_ASM_Alvaro_Joan.NoActionBar" />
+
         <activity
             android:name=".AyudaActivity1"
             android:exported="true"
