@@ -2,6 +2,8 @@
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,8 +21,12 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecy
 class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapter.ViewHolder>() {
     var rentList:List<Rent> = emptyList()
     lateinit var context:Context
+    lateinit var dni:String
     init {
+
+        dev_Utils.getRent()
         rentList=dev_Utils.rentList
+        Log.i("info", rentList.toString())
     }
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val textView: TextView = view.findViewById(R.id.textView)
@@ -39,7 +45,9 @@ class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapte
         override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
             super.onAttachedToRecyclerView(recyclerView)
             context = recyclerView.context
+
         }
+
 
         // Replace the contents of a view (invoked by the layout manager)
         override fun onBindViewHolder(viewHolder: ScooterRecyclerViewAdapter.ViewHolder, position: Int) {
@@ -59,6 +67,7 @@ class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapte
                         "Si"
                     ) { dialog, id ->
                         dev_Utils.deleteRent(rentList[position])
+                        dev_Utils.getRent()
                         val intent: Intent = Intent()
                         intent.setClass(viewHolder.root.context , NavegacioActivity::class.java)
                         viewHolder.root.context.startActivity(intent)

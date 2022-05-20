@@ -58,12 +58,7 @@ class dev_Utils {
 
             })
         }
-        fun getRent(dni:String) {
-            Executors.newSingleThreadExecutor().execute(Runnable {
-                rentList = rentDao.getDNI(dni)
 
-            })
-        }
         fun deleteRentAll() {
             Executors.newSingleThreadExecutor().execute(Runnable {
                 rentDao.deleteAll()
