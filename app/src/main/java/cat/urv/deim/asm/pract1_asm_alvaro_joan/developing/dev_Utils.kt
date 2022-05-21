@@ -59,9 +59,11 @@ class dev_Utils {
             })
         }
 
-        fun deleteRentAll() {
+        fun deleteAll() {
             Executors.newSingleThreadExecutor().execute(Runnable {
                 rentDao.deleteAll()
+                userDao.deleteAll()
+                scooterDao.deleteAll()
             })
         }
         fun deleteRent(rent: Rent) {

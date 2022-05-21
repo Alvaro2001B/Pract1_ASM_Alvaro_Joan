@@ -23,7 +23,6 @@ class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapte
     lateinit var context:Context
     lateinit var dni:String
     init {
-
         dev_Utils.getRent()
         rentList=dev_Utils.rentList
         Log.i("info", rentList.toString())
