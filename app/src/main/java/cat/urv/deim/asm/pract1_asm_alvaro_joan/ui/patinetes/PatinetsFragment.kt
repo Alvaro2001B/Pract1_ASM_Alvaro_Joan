@@ -40,8 +40,6 @@ class PatinetsFragment : Fragment() {
         slideshowViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
-        _binding = FragmentPatinetsBinding.inflate(layoutInflater)
-        val view = binding.root
         val scooter:List<Scooter> = emptyList()
         val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooter)
         binding.scooterRecyclerView.adapter = adapter
