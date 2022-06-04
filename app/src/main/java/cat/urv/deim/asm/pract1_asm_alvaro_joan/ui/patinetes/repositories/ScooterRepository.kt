@@ -19,7 +19,7 @@ class ScooterRepository {
             val scooters: Scooters
             val jsonResource: String? = AssetsProvider.getJsonDataFromRawAsset(context, resource)
             jsonResource.let {
-                scooters = ScooterParser.parseFromJson(jsonResource!!)
+                scooters = ScooterParser.parseFromJson(context)
             }
             return scooters
         }
