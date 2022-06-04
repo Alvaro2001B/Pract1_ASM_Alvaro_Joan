@@ -17,7 +17,7 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.InfoPatinetsActivity
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 
 
-class ScooterRecyclerViewAdapter(private var scooters: List<Scooter>) :
+class ScooterRecyclerViewAdapter(private var scooters: Scooters) :
         RecyclerView.Adapter<ScooterRecyclerViewAdapter.ViewHolder>() {
 
 
@@ -43,19 +43,19 @@ class ScooterRecyclerViewAdapter(private var scooters: List<Scooter>) :
 
             // Get element from your dataset at this position and replace the
             // contents of the view with that element
-            viewHolder.textView.text = scooters.get(position).uuid
+            viewHolder.textView.text = scooters.scooters.get(position).uuid
             viewHolder.root.setOnClickListener {
                 Toast.makeText(viewHolder.root.context,
                     "Row selected %d".format(position),
                     Toast.LENGTH_LONG).show()
                 dev_Utils.getScooter()
-                val scooterList:List<Scooter> = dev_Utils.scooterList
+                val scooterList:Scooters = dev_Utils.scooterList
                 var scooter: Scooter? = null
                 var find:Boolean=false
                 Log.i("info", scooterList.toString())
-                for(scooters in scooterList){
-                    if(scooters.uuid == this.scooters.get(position).uuid && !find){
-                        Log.i("info",this.scooters.get(position).uuid)
+                for(scooters in scooterList.scooters){
+                    if(scooters.uuid == this.scooters.scooters.get(position).uuid && !find){
+                        Log.i("info",this.scooters.scooters.get(position).uuid)
                         scooter=scooters
                         find=true
                     }
@@ -79,7 +79,7 @@ class ScooterRecyclerViewAdapter(private var scooters: List<Scooter>) :
         }
 
         // Return the size of your dataset (invoked by the layout manager)
-        override fun getItemCount() = scooters.size
+        override fun getItemCount() = scooters.scooters.size
 
         fun updateScooters(scooters: Scooters) {
         this.scooters = scooters.scooters
