@@ -1,8 +1,10 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.developing
 
+import android.content.Context
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.*
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.ScooterParser
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
+import kotlinx.coroutines.withContext
 import java.util.concurrent.Executors
 
 class dev_Utils {
@@ -14,11 +16,11 @@ class dev_Utils {
         var scooterList: List<Scooter> = emptyList()
         var rentList:List<Rent> = emptyList()
 
-        fun initDaos(userDao: UserDao, scooterDao: ScooterDao, rentDao: RentDao) {
+        fun initDaos(context: Context, userDao: UserDao, scooterDao: ScooterDao, rentDao: RentDao) {
             this.userDao = userDao
             this.scooterDao = scooterDao
             this.rentDao = rentDao
-            val scooter:Scooters=ScooterParser.parseFromJson("scooters.json")
+            val scooter:Scooters=ScooterParser.parseFromJson(context)
 
             for(scooterP in scooter.scooters){
                 var scooter:Scooter= Scooter(scooterP.uuid,scooterP.name,scooterP.longitude.toString(),scooterP.latitude.toString(),scooterP.battery_level.toString(),scooterP.km_use.toString(),scooterP.date_last_maintenance,scooterP.state,scooterP.on_rent)

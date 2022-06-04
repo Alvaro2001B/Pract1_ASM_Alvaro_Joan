@@ -41,6 +41,6 @@ class MainActivity : AppCompatActivity() {
         val userDao: UserDao = db.userDao()
         val scooterDao: ScooterDao =db.scooterDao()
         val rentDao: RentDao =db.RentDao()
-        dev_Utils.initDaos(userDao,scooterDao,rentDao)
+        dev_Utils.initDaos(applicationContext,userDao,scooterDao,rentDao)
     }
 }
