@@ -51,7 +51,7 @@ class ScooterRecyclerViewAdapter(private var scooters: List<Scooter>) :
 
             // Get element from your dataset at this position and replace the
             // contents of the view with that element
-            viewHolder.textView.text = scooters.get(position).ScooterID
+            viewHolder.textView.text = scooters.get(position).uuid
             viewHolder.root.setOnClickListener {
                 Toast.makeText(viewHolder.root.context,
                     "Row selected %d".format(position),
@@ -62,21 +62,21 @@ class ScooterRecyclerViewAdapter(private var scooters: List<Scooter>) :
                 var find:Boolean=false
                 Log.i("info", scooterList.toString())
                 for(scooters in scooterList){
-                    if(scooters.ScooterID == this.scooters.get(position).ScooterID && !find){
-                        Log.i("info",this.scooters.get(position).ScooterID)
+                    if(scooters.uuid == this.scooters.get(position).uuid && !find){
+                        Log.i("info",this.scooters.get(position).uuid)
                         scooter=scooters
                         find=true
                     }
                 }
                 val sharedPref : SharedPreferences =viewHolder.root.context.getSharedPreferences("datosScooter", Context.MODE_PRIVATE)
                 val edit = sharedPref.edit()
-                edit.putString("uuid", scooter!!.ScooterID)
-                edit.putString("Longitud", scooter.Longitud.toString())
-                edit.putString("Latitud",scooter.Latitud.toString())
-                edit.putString("bt_level", scooter.NivellBateria.toString())
-                edit.putString("km", scooter.KmRecorreguts.toString())
-                edit.putString("data",scooter.DarrerManteniment )
-                edit.putString("Estado",scooter.Estat)
+                edit.putString("uuid", scooter!!.uuid)
+                edit.putString("Longitud", scooter.longitude.toString())
+                edit.putString("Latitud",scooter.latitude.toString())
+                edit.putString("bt_level", scooter.battery_level.toString())
+                edit.putString("km", scooter.km_use.toString())
+                edit.putString("data",scooter.date_last_maintenance )
+                edit.putString("Estado",scooter.state)
                 edit.apply()
 
                 val intent:Intent = Intent()

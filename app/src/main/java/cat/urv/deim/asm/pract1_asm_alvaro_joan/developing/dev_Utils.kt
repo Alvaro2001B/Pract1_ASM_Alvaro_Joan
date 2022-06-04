@@ -21,7 +21,7 @@ class dev_Utils {
             val scooter:Scooters=ScooterParser.parseFromJson("scooters.json")
 
             for(scooterP in scooter.scooters){
-                var scooter:Scooter= Scooter(scooterP.uuid,scooterP.longitude,scooterP.latitude,scooterP.battery_level,scooterP.km_use,scooterP.date_last_maintenance,scooterP.state)
+                var scooter:Scooter= Scooter(scooterP.uuid,scooterP.name,scooterP.longitude.toString(),scooterP.latitude.toString(),scooterP.battery_level.toString(),scooterP.km_use.toString(),scooterP.date_last_maintenance,scooterP.state)
                 insertScooter(scooter)
             }
             getUsers()

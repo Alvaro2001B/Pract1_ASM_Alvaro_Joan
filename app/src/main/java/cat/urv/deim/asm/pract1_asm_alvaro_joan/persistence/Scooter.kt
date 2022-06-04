@@ -3,6 +3,7 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.*
 
 @Entity (tableName = "Taula_Scooters")
 data class Scooter(
