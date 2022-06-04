@@ -61,6 +61,7 @@ class dev_Utils {
                 this.scooterList.scooters.addAll(scooterDao.getAll())
             })
         }
+
         fun getRent() {
             Executors.newSingleThreadExecutor().execute(Runnable {
                 rentList = rentDao.getAll()

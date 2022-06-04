@@ -52,7 +52,7 @@ class ScooterRecyclerViewAdapter(private var scooters: Scooters) :
                 val scooterList:Scooters = dev_Utils.scooterList
                 var scooter: Scooter? = null
                 var find:Boolean=false
-                Log.i("info", scooterList.toString())
+                Log.i("info", scooterList.scooters.toString())
                 for(scooters in scooterList.scooters){
                     if(scooters.uuid == this.scooters.scooters.get(position).uuid && !find){
                         Log.i("info",this.scooters.scooters.get(position).uuid)
@@ -82,7 +82,7 @@ class ScooterRecyclerViewAdapter(private var scooters: Scooters) :
         override fun getItemCount() = scooters.scooters.size
 
         fun updateScooters(scooters: Scooters) {
-        this.scooters = scooters.scooters
+        this.scooters.scooters = scooters.scooters
         this.notifyDataSetChanged()
         }
     }

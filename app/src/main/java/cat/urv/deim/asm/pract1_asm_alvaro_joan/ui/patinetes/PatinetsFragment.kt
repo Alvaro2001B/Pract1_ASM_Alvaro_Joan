@@ -40,7 +40,10 @@ class PatinetsFragment : Fragment() {
         slideshowViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
-        val scooter:List<Scooter> = emptyList()
+        val scooter:Scooters= Scooters()
+        val layoutManager = LinearLayoutManager(context)
+        binding.scooterRecyclerView.layoutManager = layoutManager
+        binding.scooterRecyclerView.setHasFixedSize(true)
         val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooter)
         binding.scooterRecyclerView.adapter = adapter
         updateScooterRecycleView(adapter)
@@ -58,7 +61,8 @@ class PatinetsFragment : Fragment() {
             val scooters = withContext(Dispatchers.IO) {
                 dev_Utils.scooterList
             }
-            Log.i("Info", scooters.toString())
+            println(scooters.scooters.get(0).name)
+            Log.i("Info", scooters.scooters.toString())
             adapter.updateScooters(scooters)
         }
     }
