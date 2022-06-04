@@ -33,14 +33,13 @@ class PatinetsFragment : Fragment() {
     ): View {
         val slideshowViewModel =
             ViewModelProvider(this).get(PatinetsViewModel::class.java)
-
         _binding = FragmentPatinetsBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
         val textView: TextView = binding.textView
         slideshowViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
         return root
     }
 
