@@ -3,7 +3,6 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories
 import android.content.Context
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.Scooter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scootera
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.ScooterParser
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 

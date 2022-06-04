@@ -8,12 +8,12 @@ import java.util.*
 @Entity (tableName = "Taula_Scooters")
 data class Scooter(
     @PrimaryKey val uuid: String,
-    @ColumnInfo(name = "Name") val name: String?,
-    @ColumnInfo(name = "Longitud") val longitude: String?,
-    @ColumnInfo(name = "Latitud") val latitude: String?,
-    @ColumnInfo(name = "Nivell de bateria") val battery_level: String?,
-    @ColumnInfo(name = "Km recorreguts") val km_use: String?,
-    @ColumnInfo(name = "Darrera Data De Manteniment") val date_last_maintenance: String?,
-    @ColumnInfo(name = "Estat") val state: String?,
-    @ColumnInfo(name = "Rent") val on_rent: String?
+    @ColumnInfo(name = "name") val name: String?,
+    @ColumnInfo(name = "longitude") val longitude: String?,
+    @ColumnInfo(name = "latitude") val latitude: String?,
+    @ColumnInfo(name = "battery_level") val battery_level: String?,
+    @ColumnInfo(name = "km_use") val km_use: String?,
+    @ColumnInfo(name = "date_last_maintenance") val date_last_maintenance: String?,
+    @ColumnInfo(name = "state") val state: String?,
+    @ColumnInfo(name = "on_rent") val on_rent: String?
 )
