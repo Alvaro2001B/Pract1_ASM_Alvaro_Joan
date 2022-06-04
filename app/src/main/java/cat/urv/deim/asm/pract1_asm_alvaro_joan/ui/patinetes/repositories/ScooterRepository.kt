@@ -1,6 +1,7 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories
 
 import android.content.Context
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.Scooter
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scootera
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.ScooterParser
@@ -10,7 +11,7 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 class ScooterRepository {
     companion object {
 
-        fun activeScooterList(context: Context, resource: String): List<Scootera> {
+        fun activeScooterList(context: Context, resource: String): List<Scooter> {
             val scooters: Scooters = ScooterRepository.activeScooters(context, resource)
             return scooters.scooters
         }
@@ -32,9 +33,9 @@ class ScooterRepository {
         fun activeScooters(): Scooters {
             val scooters: Scooters = Scooters()
             val uuidList: Array<String> =AppConfig.DEFAULT_SCOOTERS_ID_ARRAY
-            var scooter: Scootera
+            var scooter: Scooter
             uuidList.forEach {
-                scooter = Scootera(uuid = it, name = it, longitude = it.toDouble(), latitude = it.toDouble(), battery_level = it.toInt(), km_use = it.toDouble(), date_last_maintenance=it,state=it,on_rent=it)
+                scooter = Scooter(uuid = it, name = it, longitude = it, latitude = it, battery_level = it, km_use = it, date_last_maintenance=it,state=it,on_rent=it)
                 scooters.scooters.add(scooter)
             }
 

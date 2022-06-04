@@ -14,5 +14,6 @@ data class Scooter(
     @ColumnInfo(name = "Nivell de bateria") val battery_level: String?,
     @ColumnInfo(name = "Km recorreguts") val km_use: String?,
     @ColumnInfo(name = "Darrera Data De Manteniment") val date_last_maintenance: String?,
-    @ColumnInfo(name = "Estat") val state: String?
+    @ColumnInfo(name = "Estat") val state: String?,
+    @ColumnInfo(name = "Rent") val on_rent: String?
 )
