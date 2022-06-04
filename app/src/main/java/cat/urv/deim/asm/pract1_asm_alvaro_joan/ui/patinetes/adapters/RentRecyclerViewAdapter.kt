@@ -16,6 +16,7 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.R
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.developing.dev_Utils
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.Rent
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecyclerViewAdapter
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 
 
 class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapter.ViewHolder>() {
@@ -58,6 +59,7 @@ class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapte
                 Toast.makeText(viewHolder.root.context,
                     "Row selected %d".format(position),
                     Toast.LENGTH_LONG).show()
+                dev_Utils.getRent()
                 val alertDialogBuilder = AlertDialog.Builder(context)
                 alertDialogBuilder.setTitle("Fi del alquiler")
                 alertDialogBuilder.setMessage("Vols deixar el patient?").setCancelable(false).setPositiveButton("No") { dialog, id ->
@@ -79,7 +81,10 @@ class RentRecyclerViewAdapter() : RecyclerView.Adapter<ScooterRecyclerViewAdapte
 
         // Return the size of your dataset (invoked by the layout manager)
         override fun getItemCount() = rentList.size
-
+        fun updateRent(rentList: List<Rent>) {
+        this.rentList = rentList
+        this.notifyDataSetChanged()
+        }
 
 }
 

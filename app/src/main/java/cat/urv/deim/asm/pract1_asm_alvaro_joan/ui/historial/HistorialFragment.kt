@@ -2,6 +2,7 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.historial
 
 import RentRecyclerViewAdapter
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,10 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecy
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories.ScooterRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class HistorialFragment : Fragment() {
 
@@ -38,8 +43,14 @@ class HistorialFragment : Fragment() {
         slideshowViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
-
-
+        val rentList: List<Rent> = dev_Utils.rentList
+        val layoutManager = LinearLayoutManager(context)
+        binding.rentRecyclerView.layoutManager = layoutManager
+        binding.rentRecyclerView.setHasFixedSize(true)
+        binding.rentRecyclerView.layoutManager = layoutManager
+        val adapter: RentRecyclerViewAdapter = RentRecyclerViewAdapter()
+        binding.rentRecyclerView.adapter = adapter
+        updateRentRecycleView(adapter)
         return root
     }
 
@@ -54,15 +65,18 @@ class HistorialFragment : Fragment() {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-        val rentList: List<Rent> = dev_Utils.rentList
-        binding.rentRecyclerView.setHasFixedSize(true)
-        val layoutManager = LinearLayoutManager(requireContext())
-        binding.rentRecyclerView.layoutManager = layoutManager
-        val adapter: RentRecyclerViewAdapter = RentRecyclerViewAdapter()
-        binding.rentRecyclerView.adapter = adapter
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+    fun updateRentRecycleView(adapter: RentRecyclerViewAdapter){
+        GlobalScope.launch() {
+            val rents = withContext(Dispatchers.IO) {
+                dev_Utils.getRent()
+                dev_Utils.rentList
+            }
+            adapter.updateRent(rents)
+        }
     }
 
 }

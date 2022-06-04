@@ -1,10 +1,18 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories
 
 import android.content.Context
+import android.database.sqlite.SQLiteConstraintException
+import android.util.Log
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.developing.dev_Utils
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.Scooter
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.ScooterDao
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.ScooterParser
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import java.util.*
 
 
 class ScooterRepository {
@@ -22,6 +30,24 @@ class ScooterRepository {
                 scooters = ScooterParser.parseFromJson(context)
             }
             return scooters
+        }
+        fun getAllScooters(context: Context, scooterDao: ScooterDao) = CoroutineScope(Dispatchers.Default).async {
+            return@async scooterDao.getAll()
+        }
+
+        fun deleteAllScooters(context: Context,  scooterDao: ScooterDao) = CoroutineScope(Dispatchers.Default).async {
+            return@async scooterDao.deleteAll()
+        }
+
+        fun insertScooters(context: Context,  scooterDao: ScooterDao) = CoroutineScope(Dispatchers.Default).async {
+
+            val scooter:Scooters=ScooterParser.parseFromJson(context)
+
+            for(scooterP in scooter.scooters){
+                var scooter = Scooter(scooterP.uuid,scooterP.name,scooterP.longitude.toString(),scooterP.latitude.toString(),scooterP.battery_level.toString(),scooterP.km_use.toString(),scooterP.date_last_maintenance,scooterP.state,scooterP.on_rent)
+                dev_Utils.insertScooter(scooter)
+            }
+            return@async true
         }
 
         fun activeScooters(context: Context): Scooters {

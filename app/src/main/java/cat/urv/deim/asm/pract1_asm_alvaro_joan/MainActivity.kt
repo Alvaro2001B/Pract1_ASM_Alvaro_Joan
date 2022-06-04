@@ -1,15 +1,19 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.room.Room
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.databinding.ActivityMainBinding
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.developing.dev_Utils
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.AppDatabase
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.RentDao
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.ScooterDao
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.UserDao
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.*
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories.ScooterRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -41,6 +45,18 @@ class MainActivity : AppCompatActivity() {
         val userDao: UserDao = db.userDao()
         val scooterDao: ScooterDao =db.scooterDao()
         val rentDao: RentDao =db.RentDao()
+        updateListaScooters(this, scooterDao)
         dev_Utils.initDaos(applicationContext,userDao,scooterDao,rentDao)
+    }
+    fun updateListaScooters(context:Context, scooterDao: ScooterDao){
+        CoroutineScope(Dispatchers.Main).launch {
+            val deleteResult: Deferred<Unit> = ScooterRepository.deleteAllScooters(context, scooterDao)
+            deleteResult.await()
+            val insertResult: Deferred<Any> = ScooterRepository.insertScooters(context, scooterDao)
+            insertResult.await()
+            val scooterDeferred: Deferred<List<Scooter>> = ScooterRepository.getAllScooters(context, scooterDao)
+            val scooter: List<Scooter> = scooterDeferred.await()
+            println("Update list... "+scooter.toString())
+        }
     }
 }
