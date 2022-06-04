@@ -89,4 +89,8 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
         // Return the size of your dataset (invoked by the layout manager)
         override fun getItemCount() = scooters.scooters.size
 
+    fun updateScooters(scooter: Scooters) {
+        this.scooters.scooters = scooter.scooters
+        this.notifyDataSetChanged()
+    }
     }

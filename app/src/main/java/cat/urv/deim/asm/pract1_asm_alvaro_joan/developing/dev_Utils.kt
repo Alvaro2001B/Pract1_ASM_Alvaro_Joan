@@ -1,6 +1,8 @@
 package cat.urv.deim.asm.pract1_asm_alvaro_joan.developing
 
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.persistence.*
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.ScooterParser
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 import java.util.concurrent.Executors
 
 class dev_Utils {
@@ -16,6 +18,11 @@ class dev_Utils {
             this.userDao = userDao
             this.scooterDao = scooterDao
             this.rentDao = rentDao
+            val scooter:Scooters=ScooterParser.parseFromJson("scooters.json")
+            for(scooterP in scooter.scooters){
+                var scooter:Scooter= Scooter(scooterP.uuid,scooterP.longitude,scooterP.latitude,scooterP.battery_level,scooterP.km_use,scooterP.date_last_maintenance,scooterP.state)
+                insertScooter(scooter)
+            }
             getUsers()
             getScooter()
             getRent()

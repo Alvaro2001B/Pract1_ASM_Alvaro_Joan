@@ -52,12 +52,7 @@ class PatinetsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        val scooters: Scooters = ScooterRepository.activeScooters(requireContext(), AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
-
-        for(scooterP in scooters.scooters){
-            var scooter:Scooter= Scooter(scooterP.uuid,scooterP.longitude,scooterP.latitude,scooterP.battery_level,scooterP.km_use,scooterP.date_last_maintenance,scooterP.state)
-            dev_Utils.insertScooter(scooter)
-        }
+        val scooters: Scooters = dev_Utils.scooterList
         binding.scooterRecyclerView.setHasFixedSize(true)
         val layoutManager = LinearLayoutManager(requireContext())
         binding.scooterRecyclerView.layoutManager = layoutManager
