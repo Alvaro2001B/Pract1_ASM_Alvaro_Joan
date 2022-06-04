@@ -2,6 +2,7 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -60,6 +61,7 @@ class PatinetsFragment : Fragment() {
             val scooters = withContext(Dispatchers.IO) {
                 dev_Utils.scooterList
             }
+            Log.i("Info", scooters.toString())
             adapter.updateScooters(scooters)
         }
     }
