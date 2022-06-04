@@ -2,7 +2,7 @@ package cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories
 
 import android.content.Context
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
-import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooter
+import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scootera
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.ScooterParser
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 
@@ -10,7 +10,7 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 class ScooterRepository {
     companion object {
 
-        fun activeScooterList(context: Context, resource: String): List<Scooter> {
+        fun activeScooterList(context: Context, resource: String): List<Scootera> {
             val scooters: Scooters = ScooterRepository.activeScooters(context, resource)
             return scooters.scooters
         }
@@ -32,9 +32,9 @@ class ScooterRepository {
         fun activeScooters(): Scooters {
             val scooters: Scooters = Scooters()
             val uuidList: Array<String> =AppConfig.DEFAULT_SCOOTERS_ID_ARRAY
-            var scooter: Scooter
+            var scooter: Scootera
             uuidList.forEach {
-                scooter = Scooter(uuid = it, name = it, longitude = it.toDouble(), latitude = it.toDouble(), battery_level = it.toInt(), km_use = it.toDouble(), date_last_maintenance=it,state=it,on_rent=it)
+                scooter = Scootera(uuid = it, name = it, longitude = it.toDouble(), latitude = it.toDouble(), battery_level = it.toInt(), km_use = it.toDouble(), date_last_maintenance=it,state=it,on_rent=it)
                 scooters.scooters.add(scooter)
             }
 
