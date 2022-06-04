@@ -26,15 +26,7 @@ class ScooterRecyclerViewAdapter(private var scooters: List<Scooter>) :
            // val item:FrameLayout=view.findViewById(R.id.frame)
             val root: View = view
 
-            init {
-           /* item.setOnClickListener{
-                val intent : Intent=Intent()
-                intent.setClass(view.context,BlankFragment::class.java)
-                view.context.startActivity(intent)
-            }*/
 
-
-            }
         }
 
         // Create new views (invoked by the layout manager)
@@ -89,8 +81,8 @@ class ScooterRecyclerViewAdapter(private var scooters: List<Scooter>) :
         // Return the size of your dataset (invoked by the layout manager)
         override fun getItemCount() = scooters.size
 
-        fun updateScooters(scooters: List<Scooter>) {
-        this.scooters = scooters
+        fun updateScooters(scooters: Scooters) {
+        this.scooters = scooters.scooters
         this.notifyDataSetChanged()
         }
     }

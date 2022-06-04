@@ -13,7 +13,7 @@ class dev_Utils {
         lateinit var scooterDao: ScooterDao
         lateinit var rentDao: RentDao
         var userList: List<User> = emptyList()
-        var scooterList: List<Scooter> = emptyList()
+        var scooterList: Scooters = Scooters()
         var rentList:List<Rent> = emptyList()
 
         fun initDaos(context: Context, userDao: UserDao, scooterDao: ScooterDao, rentDao: RentDao) {
@@ -58,8 +58,7 @@ class dev_Utils {
         }
         fun getScooter() {
             Executors.newSingleThreadExecutor().execute(Runnable {
-                scooterList = scooterDao.getAll()
-
+                this.scooterList.scooters.addAll(scooterDao.getAll())
             })
         }
         fun getRent() {
