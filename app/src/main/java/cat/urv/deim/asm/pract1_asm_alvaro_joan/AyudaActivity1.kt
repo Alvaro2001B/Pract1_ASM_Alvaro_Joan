@@ -61,7 +61,7 @@ class AyudaActivity1 : AppCompatActivity() {
                     intent2.setClass(this, MainActivity::class.java)
                     this.startActivity(intent2)
                     //SharedPreference
-                 sharedPref.edit().putBoolean(getString(R.string.inciar),true).apply()
+                    sharedPref.edit().putBoolean(getString(R.string.inciar),true).apply()
                 }
                     .setNegativeButton(
                         "Si"

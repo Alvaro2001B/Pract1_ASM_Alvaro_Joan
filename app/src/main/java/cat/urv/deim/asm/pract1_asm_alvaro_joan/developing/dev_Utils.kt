@@ -19,6 +19,7 @@ class dev_Utils {
             this.scooterDao = scooterDao
             this.rentDao = rentDao
             val scooter:Scooters=ScooterParser.parseFromJson("scooters.json")
+
             for(scooterP in scooter.scooters){
                 var scooter:Scooter= Scooter(scooterP.uuid,scooterP.longitude,scooterP.latitude,scooterP.battery_level,scooterP.km_use,scooterP.date_last_maintenance,scooterP.state)
                 insertScooter(scooter)

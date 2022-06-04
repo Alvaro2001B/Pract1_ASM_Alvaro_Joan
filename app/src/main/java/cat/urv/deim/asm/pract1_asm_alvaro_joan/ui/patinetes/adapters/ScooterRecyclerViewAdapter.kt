@@ -17,7 +17,7 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.InfoPatinetsActivity
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 
 
-class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
+class ScooterRecyclerViewAdapter(private var scooters: List<Scooter>) :
         RecyclerView.Adapter<ScooterRecyclerViewAdapter.ViewHolder>() {
 
 
@@ -51,7 +51,7 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
 
             // Get element from your dataset at this position and replace the
             // contents of the view with that element
-            viewHolder.textView.text = scooters.scooters.get(position).uuid
+            viewHolder.textView.text = scooters.get(position).ScooterID
             viewHolder.root.setOnClickListener {
                 Toast.makeText(viewHolder.root.context,
                     "Row selected %d".format(position),
@@ -62,8 +62,8 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
                 var find:Boolean=false
                 Log.i("info", scooterList.toString())
                 for(scooters in scooterList){
-                    if(scooters.ScooterID == this.scooters.scooters.get(position).uuid && !find){
-                        Log.i("info",this.scooters.scooters.get(position).uuid)
+                    if(scooters.ScooterID == this.scooters.get(position).ScooterID && !find){
+                        Log.i("info",this.scooters.get(position).ScooterID)
                         scooter=scooters
                         find=true
                     }
@@ -87,10 +87,10 @@ class ScooterRecyclerViewAdapter(private val scooters: Scooters) :
         }
 
         // Return the size of your dataset (invoked by the layout manager)
-        override fun getItemCount() = scooters.scooters.size
+        override fun getItemCount() = scooters.size
 
-    fun updateScooters(scooter: Scooters) {
-        this.scooters.scooters = scooter.scooters
+        fun updateScooters(scooter: List<Scooter>) {
+        this.scooters = scooters
         this.notifyDataSetChanged()
-    }
+        }
     }

@@ -16,6 +16,10 @@ import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.adapters.ScooterRecy
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.base.AppConfig
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.model.Scooters
 import cat.urv.deim.asm.pract1_asm_alvaro_joan.ui.patinetes.repositories.ScooterRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PatinetsFragment : Fragment() {
     private var _binding:FragmentPatinetsBinding? = null
@@ -43,23 +47,21 @@ class PatinetsFragment : Fragment() {
         super.onCreate(savedInstanceState)
         _binding = FragmentPatinetsBinding.inflate(layoutInflater)
         val view = binding.root
-        val scooters: Scooters = ScooterRepository.activeScooters(requireContext(), AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
-        val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooters)
+        //val scooters: Scooters = ScooterRepository.activeScooters(requireContext(), AppConfig.DEFAULT_SCOOTER_RAW_JSON_FILE)
+        val scooter:List<Scooter> = emptyList()
+        val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooter)
         binding.scooterRecyclerView.adapter = adapter
-
+        updateScooterRecycleView(adapter)
 
         }
 
-    override fun onResume() {
-        super.onResume()
-        val scooters: Scooters = dev_Utils.scooterList
-        binding.scooterRecyclerView.setHasFixedSize(true)
-        val layoutManager = LinearLayoutManager(requireContext())
-        binding.scooterRecyclerView.layoutManager = layoutManager
-        val adapter: ScooterRecyclerViewAdapter = ScooterRecyclerViewAdapter(scooters)
-        binding.scooterRecyclerView.adapter = adapter
-
-
+    fun updateScooterRecycleView(adapter: ScooterRecyclerViewAdapter){
+        GlobalScope.launch() {
+            val scooters = withContext(Dispatchers.IO) {
+                dev_Utils.scooterList
+            }
+            adapter.updateScooters(scooters)
+        }
     }
     }
 
